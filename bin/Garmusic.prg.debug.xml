@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <pcToLineNum>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\Controllers.mc" id="3" lineNum="8" pc="268435456" symbol="getMP3"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\Controllers.mc" id="3" lineNum="9" pc="268435468" symbol="getMP3"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\Controllers.mc" id="3" lineNum="10" pc="268435494" symbol="getMP3"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\Controllers.mc" id="3" lineNum="11" pc="268435534" symbol="getMP3"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\Controllers.mc" id="3" lineNum="15" pc="268435555" symbol="getMP3"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\Controllers.mc" id="3" lineNum="27" pc="268435603" symbol="getMP3"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\Controllers.mc" id="4" lineNum="29" pc="268435628" symbol="getPlaylist"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\Controllers.mc" id="4" lineNum="30" pc="268435640" symbol="getPlaylist"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\Controllers.mc" id="4" lineNum="31" pc="268435666" symbol="getPlaylist"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\Controllers.mc" id="4" lineNum="32" pc="268435706" symbol="getPlaylist"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\Controllers.mc" id="4" lineNum="36" pc="268435727" symbol="getPlaylist"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\Controllers.mc" id="4" lineNum="47" pc="268435775" symbol="getPlaylist"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="6" lineNum="5" pc="268435800" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="6" lineNum="6" pc="268435804" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="7" lineNum="10" pc="268435823" symbol="canSkip"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="7" lineNum="11" pc="268435827" symbol="canSkip"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="8" lineNum="15" pc="268435831" symbol="get"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="8" lineNum="16" pc="268435835" symbol="get"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="9" lineNum="20" pc="268435838" symbol="getPlaybackProfile"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="9" lineNum="21" pc="268435842" symbol="getPlaybackProfile"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="9" lineNum="22" pc="268435870" symbol="getPlaybackProfile"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="9" lineNum="23" pc="268435880" symbol="getPlaybackProfile"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="9" lineNum="28" pc="268435942" symbol="getPlaybackProfile"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="9" lineNum="29" pc="268435955" symbol="getPlaybackProfile"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="9" lineNum="30" pc="268435965" symbol="getPlaybackProfile"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="9" lineNum="31" pc="268435974" symbol="getPlaybackProfile"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="9" lineNum="32" pc="268435984" symbol="getPlaybackProfile"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="10" lineNum="36" pc="268435988" symbol="next"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="10" lineNum="37" pc="268435992" symbol="next"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="11" lineNum="41" pc="268435995" symbol="peekNext"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="11" lineNum="42" pc="268435999" symbol="peekNext"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="12" lineNum="46" pc="268436002" symbol="peekPrevious"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="12" lineNum="47" pc="268436006" symbol="peekPrevious"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="13" lineNum="51" pc="268436009" symbol="previous"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="13" lineNum="52" pc="268436013" symbol="previous"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="14" lineNum="56" pc="268436016" symbol="shuffling"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentIterator.mc" id="14" lineNum="57" pc="268436020" symbol="shuffling"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\AuthController.mc" id="16" lineNum="7" pc="268436024" symbol="login"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\AuthController.mc" id="16" lineNum="9" pc="268436036" symbol="login"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\AuthController.mc" id="16" lineNum="10" pc="268436043" symbol="login"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\AuthController.mc" id="16" lineNum="15" pc="268436064" symbol="login"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\AuthController.mc" id="16" lineNum="16" pc="268436071" symbol="login"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\AuthController.mc" id="16" lineNum="17" pc="268436085" symbol="login"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\AuthController.mc" id="16" lineNum="18" pc="268436106" symbol="login"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\AuthController.mc" id="16" lineNum="25" pc="268436181" symbol="login"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\AuthController.mc" id="16" lineNum="27" pc="268436199" symbol="login"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigureSyncView.mc" id="18" lineNum="8" pc="268436226" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigureSyncView.mc" id="18" lineNum="9" pc="268436230" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigureSyncView.mc" id="19" lineNum="13" pc="268436249" symbol="onLayout"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigureSyncView.mc" id="19" lineNum="14" pc="268436253" symbol="onLayout"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigureSyncView.mc" id="20" lineNum="20" pc="268436291" symbol="onShow"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigureSyncView.mc" id="21" lineNum="24" pc="268436296" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigureSyncView.mc" id="21" lineNum="26" pc="268436300" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigureSyncView.mc" id="22" lineNum="32" pc="268436321" symbol="onHide"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicView.mc" id="24" lineNum="5" pc="268436326" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicView.mc" id="24" lineNum="6" pc="268436330" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicView.mc" id="25" lineNum="10" pc="268436349" symbol="onLayout"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicView.mc" id="25" lineNum="11" pc="268436353" symbol="onLayout"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicView.mc" id="26" lineNum="18" pc="268436391" symbol="onShow"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicView.mc" id="27" lineNum="23" pc="268436396" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicView.mc" id="27" lineNum="25" pc="268436400" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicView.mc" id="28" lineNum="31" pc="268436421" symbol="onHide"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigurePlaybackView.mc" id="30" lineNum="5" pc="268436426" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigurePlaybackView.mc" id="30" lineNum="6" pc="268436430" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigurePlaybackView.mc" id="31" lineNum="10" pc="268436449" symbol="onLayout"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigurePlaybackView.mc" id="31" lineNum="11" pc="268436453" symbol="onLayout"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigurePlaybackView.mc" id="32" lineNum="17" pc="268436491" symbol="onShow"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigurePlaybackView.mc" id="33" lineNum="21" pc="268436496" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigurePlaybackView.mc" id="33" lineNum="23" pc="268436500" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigurePlaybackView.mc" id="34" lineNum="29" pc="268436521" symbol="onHide"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigureSyncDelegate.mc" id="36" lineNum="5" pc="268436526" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigureSyncDelegate.mc" id="36" lineNum="6" pc="268436530" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicDelegate.mc" id="38" lineNum="5" pc="268436549" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicDelegate.mc" id="38" lineNum="6" pc="268436553" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicDelegate.mc" id="39" lineNum="9" pc="268436572" symbol="onMenu"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicDelegate.mc" id="39" lineNum="10" pc="268436576" symbol="onMenu"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicDelegate.mc" id="39" lineNum="11" pc="268436660" symbol="onMenu"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="41" lineNum="10" pc="268436664" symbol="getAllSongs"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="41" lineNum="11" pc="268436676" symbol="getAllSongs"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="41" lineNum="12" pc="268436702" symbol="getAllSongs"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="41" lineNum="13" pc="268436720" symbol="getAllSongs"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="41" lineNum="15" pc="268436728" symbol="getAllSongs"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="41" lineNum="19" pc="268436752" symbol="getAllSongs"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="41" lineNum="25" pc="268436790" symbol="getAllSongs"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="42" lineNum="28" pc="268436819" symbol="getSong"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="42" lineNum="30" pc="268436831" symbol="getSong"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="42" lineNum="34" pc="268436857" symbol="getSong"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="42" lineNum="36" pc="268436875" symbol="getSong"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="42" lineNum="38" pc="268436883" symbol="getSong"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="42" lineNum="43" pc="268436891" symbol="getSong"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\controllers\\SongController.mc" id="42" lineNum="50" pc="268436969" symbol="getSong"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicSyncDelegate.mc" id="44" lineNum="6" pc="268436998" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicSyncDelegate.mc" id="44" lineNum="7" pc="268437002" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicSyncDelegate.mc" id="45" lineNum="13" pc="268437021" symbol="onStartSync"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicSyncDelegate.mc" id="45" lineNum="14" pc="268437025" symbol="onStartSync"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicSyncDelegate.mc" id="46" lineNum="18" pc="268437043" symbol="isSyncNeeded"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicSyncDelegate.mc" id="46" lineNum="19" pc="268437047" symbol="isSyncNeeded"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicSyncDelegate.mc" id="47" lineNum="23" pc="268437051" symbol="onStopSync"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicSyncDelegate.mc" id="47" lineNum="24" pc="268437055" symbol="onStopSync"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicSyncDelegate.mc" id="47" lineNum="25" pc="268437071" symbol="onStopSync"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigurePlaybackDelegate.mc" id="49" lineNum="5" pc="268437089" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicConfigurePlaybackDelegate.mc" id="49" lineNum="6" pc="268437093" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\models\\Song.mc" id="51" lineNum="6" pc="268437112" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\models\\Song.mc" id="51" lineNum="7" pc="268437116" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\models\\Song.mc" id="51" lineNum="8" pc="268437126" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="53" lineNum="10" pc="268437137" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="53" lineNum="11" pc="268437141" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="54" lineNum="14" pc="268437160" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="54" lineNum="15" pc="268437164" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="54" lineNum="16" pc="268437175" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="54" lineNum="17" pc="268437210" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="54" lineNum="18" pc="268437221" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="54" lineNum="19" pc="268437242" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="54" lineNum="20" pc="268437277" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="54" lineNum="21" pc="268437288" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="54" lineNum="22" pc="268437309" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="55" lineNum="26" pc="268437345" symbol="songsCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="55" lineNum="27" pc="268437349" symbol="songsCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="55" lineNum="28" pc="268437360" symbol="songsCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="55" lineNum="31" pc="268437364" symbol="songsCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="55" lineNum="32" pc="268437378" symbol="songsCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="55" lineNum="33" pc="268437402" symbol="songsCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="55" lineNum="35" pc="268437448" symbol="songsCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="56" lineNum="39" pc="268437469" symbol="songCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="56" lineNum="40" pc="268437473" symbol="songCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="56" lineNum="41" pc="268437484" symbol="songCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="56" lineNum="44" pc="268437488" symbol="songCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="57" lineNum="47" pc="268437493" symbol="authCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicMenuDelegate.mc" id="57" lineNum="49" pc="268437497" symbol="authCallback"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\models\\Playlist.mc" id="59" lineNum="6" pc="268437514" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\models\\Playlist.mc" id="59" lineNum="7" pc="268437518" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\models\\Playlist.mc" id="59" lineNum="8" pc="268437528" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicApp.mc" id="64" lineNum="5" pc="268437542" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicApp.mc" id="64" lineNum="6" pc="268437546" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicApp.mc" id="65" lineNum="10" pc="268437565" symbol="onStart"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicApp.mc" id="66" lineNum="14" pc="268437570" symbol="onStop"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicApp.mc" id="67" lineNum="18" pc="268437575" symbol="getContentDelegate"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicApp.mc" id="67" lineNum="21" pc="268437579" symbol="getContentDelegate"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicApp.mc" id="68" lineNum="25" pc="268437603" symbol="getSyncDelegate"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicApp.mc" id="68" lineNum="26" pc="268437607" symbol="getSyncDelegate"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicApp.mc" id="69" lineNum="30" pc="268437631" symbol="getPlaybackConfigurationView"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicApp.mc" id="69" lineNum="31" pc="268437635" symbol="getPlaybackConfigurationView"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicApp.mc" id="70" lineNum="36" pc="268437703" symbol="getSyncConfigurationView"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicApp.mc" id="70" lineNum="37" pc="268437707" symbol="getSyncConfigurationView"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentDelegate.mc" id="72" lineNum="9" pc="268437775" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentDelegate.mc" id="72" lineNum="10" pc="268437779" symbol="initialize"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentDelegate.mc" id="73" lineNum="16" pc="268437798" symbol="getContentIterator"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentDelegate.mc" id="73" lineNum="17" pc="268437802" symbol="getContentIterator"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentDelegate.mc" id="73" lineNum="18" pc="268437834" symbol="getContentIterator"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentDelegate.mc" id="74" lineNum="20" pc="268437858" symbol="myCallbackHandler"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentDelegate.mc" id="75" lineNum="24" pc="268437863" symbol="onAdAction"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentDelegate.mc" id="76" lineNum="28" pc="268437868" symbol="onThumbsUp"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentDelegate.mc" id="77" lineNum="32" pc="268437873" symbol="onThumbsDown"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentDelegate.mc" id="78" lineNum="36" pc="268437878" symbol="onShuffle"/>
+        <entry filename="C:\\Users\\hapes\\eclipse-workspace\\Garmusic\\source\\GarmusicContentDelegate.mc" id="79" lineNum="41" pc="268437883" symbol="onSong"/>
+        <entry filename="Rez" id="85" lineNum="16" pc="268437888" symbol="ConfigurePlaybackLayout"/>
+        <entry filename="Rez" id="85" lineNum="18" pc="268437900" symbol="ConfigurePlaybackLayout"/>
+        <entry filename="Rez" id="85" lineNum="20" pc="268437913" symbol="ConfigurePlaybackLayout"/>
+        <entry filename="Rez" id="85" lineNum="21" pc="268438068" symbol="ConfigurePlaybackLayout"/>
+        <entry filename="Rez" id="85" lineNum="22" pc="268438180" symbol="ConfigurePlaybackLayout"/>
+        <entry filename="Rez" id="85" lineNum="24" pc="268438217" symbol="ConfigurePlaybackLayout"/>
+        <entry filename="Rez" id="86" lineNum="33" pc="268438245" symbol="ConfigureSyncLayout"/>
+        <entry filename="Rez" id="86" lineNum="35" pc="268438257" symbol="ConfigureSyncLayout"/>
+        <entry filename="Rez" id="86" lineNum="37" pc="268438270" symbol="ConfigureSyncLayout"/>
+        <entry filename="Rez" id="86" lineNum="38" pc="268438425" symbol="ConfigureSyncLayout"/>
+        <entry filename="Rez" id="86" lineNum="39" pc="268438537" symbol="ConfigureSyncLayout"/>
+        <entry filename="Rez" id="86" lineNum="41" pc="268438574" symbol="ConfigureSyncLayout"/>
+        <entry filename="Rez" id="87" lineNum="50" pc="268438602" symbol="MainLayout"/>
+        <entry filename="Rez" id="87" lineNum="53" pc="268438614" symbol="MainLayout"/>
+        <entry filename="Rez" id="87" lineNum="55" pc="268438814" symbol="MainLayout"/>
+        <entry filename="Rez" id="90" lineNum="68" pc="268438832" symbol="initialize"/>
+        <entry filename="Rez" id="90" lineNum="69" pc="268438836" symbol="initialize"/>
+        <entry filename="Rez" id="90" lineNum="70" pc="268438854" symbol="initialize"/>
+        <entry filename="Rez" id="90" lineNum="71" pc="268438910" symbol="initialize"/>
+        <entry filename="Rez" id="90" lineNum="72" pc="268438966" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="29" object="true" symbol="GarmusicApp"/>
+        <entry id="16" module="true" symbol="AuthController"/>
+        <entry id="23" object="true" symbol="GarmusicSyncDelegate"/>
+        <entry id="30" object="true" symbol="GarmusicContentDelegate"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8388826" method="true" symbol="next"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="8388637" module="true" symbol="Communications"/>
+        <entry id="8390430" method="true" symbol="getContentDelegate"/>
+        <entry id="19" object="true" symbol="GarmusicConfigurePlaybackView"/>
+        <entry id="8390382" method="true" symbol="onSong"/>
+        <entry id="8390424" module="true" symbol="Storage"/>
+        <entry id="8390380" method="true" symbol="onThumbsDown"/>
+        <entry id="18" object="true" symbol="GarmusicView"/>
+        <entry id="22" module="true" symbol="SongController"/>
+        <entry id="8390370" method="true" symbol="previous"/>
+        <entry field="true" id="56" symbol="api_dev"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="17" object="true" symbol="GarmusicConfigureSyncView"/>
+        <entry id="8390211" module="true" symbol="Media"/>
+        <entry id="36" object="true" symbol="MainMenu"/>
+        <entry field="true" id="46" symbol="configureSyncMessage"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="50" method="true" symbol="myCallbackHandler"/>
+        <entry id="53" method="true" symbol="getSong"/>
+        <entry id="60" method="true" symbol="authCallback"/>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="39" method="true" symbol="MainLayout"/>
+        <entry id="8390378" method="true" symbol="onAdAction"/>
+        <entry id="8390374" method="true" symbol="canSkip"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8390342" method="true" symbol="isSyncNeeded"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="61" symbol="item_login"/>
+        <entry field="true" id="47" symbol="AppName"/>
+        <entry id="8389594" symbol="headers"/>
+        <entry id="8390373" method="true" symbol="shuffling"/>
+        <entry field="true" id="8388892" symbol="name"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry id="24" object="true" symbol="GarmusicConfigurePlaybackDelegate"/>
+        <entry id="8390431" method="true" symbol="getSyncDelegate"/>
+        <entry id="8390341" method="true" symbol="onStartSync"/>
+        <entry id="63" symbol="item_2"/>
+        <entry id="62" symbol="item_1"/>
+        <entry id="8390459" method="true" symbol="onStopSync"/>
+        <entry field="true" id="35" symbol="LauncherIcon"/>
+        <entry id="8390434" method="true" symbol="getSyncConfigurationView"/>
+        <entry field="true" id="44" symbol="menu_label_2"/>
+        <entry field="true" id="42" symbol="menu_label_1"/>
+        <entry id="8388786" method="true" symbol="method"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="57" symbol="api_prod"/>
+        <entry field="true" id="34" symbol="id_monkey"/>
+        <entry id="26" object="true" symbol="GarmusicMenuDelegate"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="8389347" symbol="color"/>
+        <entry id="38" method="true" symbol="ConfigureSyncLayout"/>
+        <entry id="8390377" method="true" symbol="getContentIterator"/>
+        <entry id="59" method="true" symbol="songCallback"/>
+        <entry id="8390372" method="true" symbol="peekPrevious"/>
+        <entry id="8388789" method="true" symbol="get"/>
+        <entry id="8389109" method="true" symbol="onMenuItem"/>
+        <entry id="37" method="true" symbol="ConfigurePlaybackLayout"/>
+        <entry id="8390432" method="true" symbol="getPlaybackConfigurationView"/>
+        <entry id="52" method="true" symbol="getAllSongs"/>
+        <entry field="true" id="41" symbol="menu_login"/>
+        <entry id="32" module="true" symbol="Layouts"/>
+        <entry id="27" object="true" symbol="Playlist"/>
+        <entry field="true" id="45" symbol="prompt"/>
+        <entry id="54" method="true" symbol="login"/>
+        <entry field="true" id="51" symbol="token"/>
+        <entry id="8390371" method="true" symbol="peekNext"/>
+        <entry id="28" module="true" symbol="ConfigModule"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="48" method="true" symbol="getMP3"/>
+        <entry id="20" object="true" symbol="GarmusicConfigureSyncDelegate"/>
+        <entry id="8389345" symbol="rezId"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry id="21" object="true" symbol="GarmusicDelegate"/>
+        <entry id="8389844" symbol="responseType"/>
+        <entry id="8389346" symbol="text"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="49" method="true" symbol="getPlaylist"/>
+        <entry field="true" id="43" symbol="login_prompt"/>
+        <entry field="true" id="40" symbol="configurePlaybackMessage"/>
+        <entry id="33" module="true" symbol="Menus"/>
+        <entry id="8390379" method="true" symbol="onThumbsUp"/>
+        <entry id="8390441" object="true" symbol="mediaEncoding"/>
+        <entry field="true" id="31" symbol="id"/>
+        <entry id="15" object="true" symbol="GarmusicContentIterator"/>
+        <entry id="8390369" method="true" symbol="getPlaybackProfile"/>
+        <entry id="25" object="true" symbol="Song"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry id="14" module="true" symbol="Controllers"/>
+        <entry id="58" method="true" symbol="songsCallback"/>
+        <entry id="8390381" method="true" symbol="onShuffle"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="55" object="true" symbol="APIConstants"/>
+    </symbolTable>
+    <localVars>
+        <entry endPc="268435627" name="options" stackId="4" startPc="268435468"/>
+        <entry endPc="268435627" name="url" stackId="2" startPc="268435468"/>
+        <entry endPc="268435627" name="params" stackId="3" startPc="268435468"/>
+        <entry endPc="268435628" name="callback" stackId="1" startPc="268435456"/>
+        <entry endPc="268435799" name="options" stackId="4" startPc="268435640"/>
+        <entry endPc="268435799" name="url" stackId="2" startPc="268435640"/>
+        <entry endPc="268435799" name="params" stackId="3" startPc="268435640"/>
+        <entry endPc="268435800" name="callback" stackId="1" startPc="268435628"/>
+        <entry endPc="268435987" name="profile" stackId="1" startPc="268435842"/>
+        <entry endPc="268436225" name="resultType" stackId="5" startPc="268436036"/>
+        <entry endPc="268436225" name="resultKeys" stackId="6" startPc="268436036"/>
+        <entry endPc="268436225" name="requestUrl" stackId="2" startPc="268436036"/>
+        <entry endPc="268436225" name="requestParams" stackId="3" startPc="268436036"/>
+        <entry endPc="268436225" name="params" stackId="7" startPc="268436036"/>
+        <entry endPc="268436225" name="resultUrl" stackId="4" startPc="268436036"/>
+        <entry endPc="268436226" name="callback" stackId="1" startPc="268436024"/>
+        <entry endPc="268436291" name="dc" stackId="1" startPc="268436249"/>
+        <entry endPc="268436321" name="dc" stackId="1" startPc="268436296"/>
+        <entry endPc="268436391" name="dc" stackId="1" startPc="268436349"/>
+        <entry endPc="268436421" name="dc" stackId="1" startPc="268436396"/>
+        <entry endPc="268436491" name="dc" stackId="1" startPc="268436449"/>
+        <entry endPc="268436521" name="dc" stackId="1" startPc="268436496"/>
+        <entry endPc="268436818" name="options" stackId="5" startPc="268436676"/>
+        <entry endPc="268436818" name="url" stackId="2" startPc="268436676"/>
+        <entry endPc="268436818" name="headers" stackId="4" startPc="268436676"/>
+        <entry endPc="268436818" name="params" stackId="3" startPc="268436676"/>
+        <entry endPc="268436819" name="callback" stackId="1" startPc="268436664"/>
+        <entry endPc="268436997" name="options" stackId="5" startPc="268436831"/>
+        <entry endPc="268436997" name="url" stackId="2" startPc="268436831"/>
+        <entry endPc="268436997" name="headers" stackId="4" startPc="268436831"/>
+        <entry endPc="268436997" name="params" stackId="3" startPc="268436831"/>
+        <entry endPc="268436998" name="callback" stackId="1" startPc="268436819"/>
+        <entry endPc="268437137" name="name" stackId="2" startPc="268437112"/>
+        <entry endPc="268437137" name="id" stackId="1" startPc="268437112"/>
+        <entry endPc="268437345" name="item" stackId="1" startPc="268437160"/>
+        <entry endPc="268437455" name="song" stackId="5" startPc="268437402"/>
+        <entry endPc="268437468" name="i" stackId="4" startPc="268437402"/>
+        <entry endPc="268437468" name="songs" stackId="3" startPc="268437349"/>
+        <entry endPc="268437469" name="responseCode" stackId="1" startPc="268437345"/>
+        <entry endPc="268437469" name="data" stackId="2" startPc="268437345"/>
+        <entry endPc="268437492" name="song" stackId="3" startPc="268437473"/>
+        <entry endPc="268437493" name="responseCode" stackId="1" startPc="268437469"/>
+        <entry endPc="268437493" name="data" stackId="2" startPc="268437469"/>
+        <entry endPc="268437514" name="message" stackId="1" startPc="268437493"/>
+        <entry endPc="268437539" name="name" stackId="2" startPc="268437514"/>
+        <entry endPc="268437539" name="id" stackId="1" startPc="268437514"/>
+        <entry endPc="268437570" name="state" stackId="1" startPc="268437565"/>
+        <entry endPc="268437575" name="state" stackId="1" startPc="268437570"/>
+        <entry endPc="268437603" name="arg" stackId="1" startPc="268437575"/>
+        <entry endPc="268437863" name="responseType" stackId="1" startPc="268437858"/>
+        <entry endPc="268437863" name="data" stackId="2" startPc="268437858"/>
+        <entry endPc="268437868" name="adContext" stackId="1" startPc="268437863"/>
+        <entry endPc="268437873" name="contentRefId" stackId="1" startPc="268437868"/>
+        <entry endPc="268437878" name="contentRefId" stackId="1" startPc="268437873"/>
+        <entry endPc="268437888" name="playbackPosition" stackId="3" startPc="268437883"/>
+        <entry endPc="268437888" name="songEvent" stackId="2" startPc="268437883"/>
+        <entry endPc="268437888" name="contentRefId" stackId="1" startPc="268437883"/>
+        <entry endPc="268438244" name="rez_cmp_local_text_1601831222" stackId="3" startPc="268437900"/>
+        <entry endPc="268438244" name="rez_cmp_local_var_dc_getWidth" stackId="2" startPc="268437900"/>
+        <entry endPc="268438244" name="rez_cmp_local_bitmap_id_monkey" stackId="4" startPc="268437900"/>
+        <entry endPc="268438245" name="dc" stackId="1" startPc="268437888"/>
+        <entry endPc="268438601" name="rez_cmp_local_var_dc_getWidth" stackId="2" startPc="268438257"/>
+        <entry endPc="268438601" name="rez_cmp_local_text_5005754282" stackId="3" startPc="268438257"/>
+        <entry endPc="268438601" name="rez_cmp_local_bitmap_id_monkey" stackId="4" startPc="268438257"/>
+        <entry endPc="268438602" name="dc" stackId="1" startPc="268438245"/>
+        <entry endPc="268438831" name="rez_cmp_local_text_1473084295" stackId="2" startPc="268438614"/>
+        <entry endPc="268438832" name="dc" stackId="1" startPc="268438602"/>
+    </localVars>
+    <annotations/>
+    <dataEntryOffsetMappings>
+        <dataEntry offset="127" parentId="" symbolId="globals" type="module"/>
+        <dataEntry offset="310" parentId="globals" symbolId="Song" type="class"/>
+        <dataEntry offset="373" parentId="globals" symbolId="GarmusicConfigureSyncDelegate" type="class"/>
+        <dataEntry offset="420" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry offset="499" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry offset="546" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry offset="585" parentId="Menus" symbolId="MainMenu" type="class"/>
+        <dataEntry offset="632" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry offset="663" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry offset="718" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry offset="749" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry offset="844" parentId="globals" symbolId="GarmusicConfigurePlaybackView" type="class"/>
+        <dataEntry offset="923" parentId="globals" symbolId="GarmusicApp" type="class"/>
+        <dataEntry offset="1018" parentId="globals" symbolId="Controllers" type="module"/>
+        <dataEntry offset="1065" parentId="globals" symbolId="GarmusicDelegate" type="class"/>
+        <dataEntry offset="1120" parentId="globals" symbolId="GarmusicView" type="class"/>
+        <dataEntry offset="1199" parentId="globals" symbolId="GarmusicSyncDelegate" type="class"/>
+        <dataEntry offset="1270" parentId="globals" symbolId="GarmusicConfigureSyncView" type="class"/>
+        <dataEntry offset="1349" parentId="globals" symbolId="GarmusicConfigurePlaybackDelegate" type="class"/>
+        <dataEntry offset="1396" parentId="globals" symbolId="GarmusicContentDelegate" type="class"/>
+        <dataEntry offset="1499" parentId="globals" symbolId="SongController" type="module"/>
+        <dataEntry offset="1554" parentId="globals" symbolId="AuthController" type="module"/>
+        <dataEntry offset="1593" parentId="globals" symbolId="GarmusicContentIterator" type="class"/>
+        <dataEntry offset="1704" parentId="globals" symbolId="ConfigModule" type="module"/>
+        <dataEntry offset="1743" parentId="ConfigModule" symbolId="APIConstants" type="class"/>
+        <dataEntry offset="1837" parentId="globals" symbolId="Playlist" type="class"/>
+        <dataEntry offset="1900" parentId="globals" symbolId="GarmusicMenuDelegate" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="getMP3" parent="Controllers">
+            <param id="callback"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getPlaylist" parent="Controllers">
+            <param id="callback"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="GarmusicContentIterator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="canSkip" parent="GarmusicContentIterator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="get" parent="GarmusicContentIterator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getPlaybackProfile" parent="GarmusicContentIterator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="next" parent="GarmusicContentIterator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="peekNext" parent="GarmusicContentIterator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="peekPrevious" parent="GarmusicContentIterator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="previous" parent="GarmusicContentIterator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="shuffling" parent="GarmusicContentIterator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="login" parent="AuthController">
+            <param id="callback"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="GarmusicConfigureSyncView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onLayout" parent="GarmusicConfigureSyncView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="GarmusicConfigureSyncView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onUpdate" parent="GarmusicConfigureSyncView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="GarmusicConfigureSyncView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="GarmusicView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onLayout" parent="GarmusicView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="GarmusicView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onUpdate" parent="GarmusicView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="GarmusicView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="GarmusicConfigurePlaybackView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onLayout" parent="GarmusicConfigurePlaybackView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="GarmusicConfigurePlaybackView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onUpdate" parent="GarmusicConfigurePlaybackView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="GarmusicConfigurePlaybackView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="GarmusicConfigureSyncDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="GarmusicDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onMenu" parent="GarmusicDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getAllSongs" parent="SongController">
+            <param id="callback"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getSong" parent="SongController">
+            <param id="callback"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="GarmusicSyncDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStartSync" parent="GarmusicSyncDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="isSyncNeeded" parent="GarmusicSyncDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStopSync" parent="GarmusicSyncDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="GarmusicConfigurePlaybackDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="Song">
+            <param id="id"/>
+            <param id="name"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="GarmusicMenuDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onMenuItem" parent="GarmusicMenuDelegate">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="songsCallback" parent="GarmusicMenuDelegate">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="songCallback" parent="GarmusicMenuDelegate">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="authCallback" parent="GarmusicMenuDelegate">
+            <param id="message"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="Playlist">
+            <param id="id"/>
+            <param id="name"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="GarmusicApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStart" parent="GarmusicApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="GarmusicApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getContentDelegate" parent="GarmusicApp">
+            <param id="arg"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getSyncDelegate" parent="GarmusicApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getPlaybackConfigurationView" parent="GarmusicApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getSyncConfigurationView" parent="GarmusicApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="GarmusicContentDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getContentIterator" parent="GarmusicContentDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="myCallbackHandler" parent="GarmusicContentDelegate">
+            <param id="responseType"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onAdAction" parent="GarmusicContentDelegate">
+            <param id="adContext"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onThumbsUp" parent="GarmusicContentDelegate">
+            <param id="contentRefId"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onThumbsDown" parent="GarmusicContentDelegate">
+            <param id="contentRefId"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShuffle" parent="GarmusicContentDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onSong" parent="GarmusicContentDelegate">
+            <param id="contentRefId"/>
+            <param id="songEvent"/>
+            <param id="playbackPosition"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="ConfigurePlaybackLayout" parent="Layouts">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="ConfigureSyncLayout" parent="Layouts">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="MainLayout" parent="Layouts">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="MainMenu">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

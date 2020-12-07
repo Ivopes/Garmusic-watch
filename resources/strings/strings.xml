@@ -1,0 +1,12 @@
+<strings>
+    <string id="AppName">Garmusic</string>
+
+    <string id="configureSyncMessage">Configure\nSync</string>
+    <string id="configurePlaybackMessage">Configure\nPlayback</string>
+    
+    <string id="prompt">Click the menu button</string>
+	<string id="login_prompt">Login</string>
+	<string id="menu_login">Login</string>
+    <string id="menu_label_1">Download json songs</string>
+    <string id="menu_label_2">Download file song</string>
+</strings>
