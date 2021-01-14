@@ -1,13 +1,13 @@
 using Toybox.System;
 using Toybox.Communications;
-using ConfigModule;
+using APIConstants;
 
 module Controllers {
 	//class webRequestsController {
 	
 		function getMP3(callback) {
-		    var url = ConfigModule.APIConstants.api_dev + "/Mp3";  // set the url
-			System.println(ConfigModule.APIConstants.api_dev+"/Mp3");
+		    var url = API_DEV + "/Mp3";  // set the url
+			System.println(API_DEV+"/Mp3");
 		    var params = {                                              // set the parameters
 		            "definedParamsinedParams" => "123456789abcdefg"
 		    };
@@ -27,8 +27,8 @@ module Controllers {
 		    Communications.makeWebRequest(url, params, options, callback);
 	    }
 	    function getPlaylist(callback) {
-		    var url = ConfigModule.APIConstants.api_dev + "/Playlist";  // set the url
-			System.println(ConfigModule.APIConstants.api_dev+"/Playlist");
+		    var url = API_DEV + "/Playlist";  // set the url
+			System.println(API_DEV+"/Playlist");
 		    var params = {                                              // set the parameters
 		            "definedParamsinedParams" => "123456789abcdefg"
 		    };

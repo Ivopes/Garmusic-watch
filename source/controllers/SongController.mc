@@ -1,6 +1,6 @@
 using Toybox.System;
 using Toybox.Communications;
-using ConfigModule;
+using APIConstants;
 using Toybox.Media;
 
 module SongController {
@@ -8,7 +8,7 @@ module SongController {
 	var token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIxIiwiZXhwIjoxNjA2MzM0Mzk5LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDMwMyJ9.iwROAnIS6xQJckcxBH5GLpCp8RX-JDBUSVAO1AMUS84";
 	
     function getAllSongs(callback) {
-    	var url = ConfigModule.APIConstants.api_dev + "/song";  
+    	var url = API_DEV + "/song";  
 		System.println(url);
 	    var params = {};
 	    
@@ -27,7 +27,7 @@ module SongController {
     
     function getSong(callback) {
     
-    	var url = ConfigModule.APIConstants.api_dev + "/song/llfile/27";  
+    	var url = API_DEV + "/song/file/27";  
     	//var url = ConfigModule.APIConstants.api_prod + "/song/file/27";  
     	
     	

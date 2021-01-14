@@ -1,6 +1,6 @@
 using Toybox.System;
 using Toybox.Communications;
-using ConfigModule;
+using APIConstants;
 
 module AuthController {
 

@@ -29,11 +29,11 @@ class GarmusicMenuDelegate extends WatchUi.MenuInputDelegate {
     	}
     
     	var songs = new [data.size()];
-    	for (var i = 0; i < data.size(); i++) {
+    	/*for (var i = 0; i < data.size(); i++) {
     		var song = new Song(data[i]["id"], data[i]["name"]);
     		
     		songs[i] = song ;
-    	}    	
+    	}   */ 	
     }
     //file callback
     function songCallback(responseCode, data) {

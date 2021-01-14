@@ -1,4 +1,5 @@
 using Toybox.Application;
+using Toybox.Application.Storage as storage;
 
 class GarmusicApp extends Application.AudioContentProviderApp {
 
@@ -16,8 +17,6 @@ class GarmusicApp extends Application.AudioContentProviderApp {
 
     // Get a Media.ContentDelegate for use by the system to get and iterate through media on the device
     function getContentDelegate(arg) {
-		
-    
         return new GarmusicContentDelegate();
     }
 
@@ -29,12 +28,10 @@ class GarmusicApp extends Application.AudioContentProviderApp {
     // Get the initial view for configuring playback
     function getPlaybackConfigurationView() {
         return [ new GarmusicConfigurePlaybackView(), new GarmusicConfigurePlaybackDelegate() ];
-        //return [ new GarmusicView(), new GarmusicDelegate() ];
     }
 
     // Get the initial view for configuring sync
     function getSyncConfigurationView() {
         return [ new GarmusicConfigureSyncView(), new GarmusicConfigureSyncDelegate() ];
     }
-
 }
