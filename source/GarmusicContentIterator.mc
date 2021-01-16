@@ -1,5 +1,6 @@
 using Toybox.Media;
 using Toybox.Application.Storage as storage;
+using StorageKeys as keys;
 
 class GarmusicContentIterator extends Media.ContentIterator {
 
@@ -25,28 +26,24 @@ class GarmusicContentIterator extends Media.ContentIterator {
 
     // Get the current media content object.
     function get() {
+    	if (mSongIndex >= mPlaylist.size() || mSongIndex < 0) {
+    		return null;
+    	}
+    	// Get Id of song
+    	var songResId = mPlaylist[mSongIndex];
+    	// Get Song
+    	var song = Media.getCachedContentObj(new Media.ContentRef(songResId, Media.CONTENT_TYPE_AUDIO));
     
-    	if (mSongIndex < (mPlaylist.size() - 1)) {
-            ++mSongIndex;
-            var obj = Media.getCachedContentObj(new Media.ContentRef(mPlaylist[mSongIndex], Media.CONTENT_TYPE_AUDIO));
-            return obj;
-        }
-
-        return null;
-        var obj = Media.getCachedContentObj(new Media.ContentRef(-2030043124, Media.CONTENT_TYPE_AUDIO));
-            return obj;
+    	return song;
     }
-
+	
     // Get the current media content playback profile
     function getPlaybackProfile() {
         var profile = new Media.PlaybackProfile();
        
         profile.playbackControls = [
             PLAYBACK_CONTROL_NEXT,
-            //PLAYBACK_CONTROL_PLAYBACK,
-            PLAYBACK_CONTROL_PREVIOUS,
-            //PLAYBACK_CONTROL_SKIP_BACKWARD,
-            //PLAYBACK_CONTROL_SKIP_FORWARD
+            PLAYBACK_CONTROL_PREVIOUS
         ];
 
         return profile;
@@ -54,52 +51,71 @@ class GarmusicContentIterator extends Media.ContentIterator {
 
     // Get the next media content object.
     function next() {
-    	if (mSongIndex < (mPlaylist.size() - 1)) {
-            ++mSongIndex;
-            //var obj = Media.getCachedContentObj(new Media.ContentRef(mPlaylist[mSongIndex], Media.CONTENT_TYPE_AUDIO));
-            var obj = Media.getCachedContentObj(new Media.ContentRef(-2030043135, Media.CONTENT_TYPE_AUDIO));
-            return obj;
-        }
+    	if (mSongIndex + 1 >= mPlaylist.size()) {
+    		 System.println("next End");
+    		return null;
+    	}
+    	 System.println("next");
+    	mSongIndex++;
+    	
+    	// Get Id of song
+    	var songResId = mPlaylist[mSongIndex];
+    	// Get Song
+    	var song = Media.getCachedContentObj(new Media.ContentRef(songResId, Media.CONTENT_TYPE_AUDIO));
     
-        return null;
+    	return song;
     }
 
     // Get the next media content object without incrementing the iterator.
     function peekNext() {
-     	var nextIndex = mSongIndex + 1;
-        /*if (nextIndex < mPlaylist.size()) {
-            var obj = Media.getCachedContentObj(new Media.ContentRef(mPlaylist[nextIndex], Media.CONTENT_TYPE_AUDIO));
-            return obj;
-        }*/
-
-        return null;
-        //return null;
+     	if (mSongIndex + 1 >= mPlaylist.size()) {
+    	 System.println("next peek End");
+    		return null;
+    	}
+    	 System.println("next peek");
+    	// Get Id of song
+    	var songResId = mPlaylist[mSongIndex+1];
+    	// Get Song
+    	var song = Media.getCachedContentObj(new Media.ContentRef(songResId, Media.CONTENT_TYPE_AUDIO));
+    
+    	return song;
     }
 
     // Get the previous media content object without decrementing the iterator.
     function peekPrevious() {
-    	var previousIndex = mSongIndex - 1;
-        if (previousIndex >= 0) {
-            var obj = Media.getCachedContentObj(new Media.ContentRef(mPlaylist[previousIndex], Media.CONTENT_TYPE_AUDIO));
-            return obj;
-        }
+    	if (mSongIndex  <= 0) {
+    	 System.println("prev peek End");
+    		return null;
+    	}
+    	 System.println("prev peek");
+    	// Get Id of song
+    	var songResId = mPlaylist[mSongIndex-1];
+    	// Get Song
+    	var song = Media.getCachedContentObj(new Media.ContentRef(songResId, Media.CONTENT_TYPE_AUDIO));
     
-        return null;
+    	return song;
     }
 
     // Get the previous media content object.
     function previous() {
-    	if (mSongIndex > 0) {
-            --mSongIndex;
-            var obj = Media.getCachedContentObj(new Media.ContentRef(mPlaylist[mSongIndex], Media.CONTENT_TYPE_AUDIO));
-            return obj;
-        }
     
-        return null;
+    	if (mSongIndex  <= 0) {
+    	 System.println("prev End");
+    		return null;
+    	}
+    	 System.println("prev");
+    	mSongIndex--;
+    	// Get Id of song
+    	var songResId = mPlaylist[mSongIndex];
+    	// Get Song
+    	var song = Media.getCachedContentObj(new Media.ContentRef(songResId, Media.CONTENT_TYPE_AUDIO));
+    
+    	return song;
     }
 
     // Determine if playback is currently set to shuffle.
     function shuffling() {
+    	System.println("shufle");
      	return mShuffling;
         //return false;
     }
@@ -107,25 +123,37 @@ class GarmusicContentIterator extends Media.ContentIterator {
     // Gets the songs to play. If no playlist is available then all the songs in the
     // system are played.
     function initializePlaylist() {
-        var tempPlaylist = storage.getValue("playlists");
-        
-        if (tempPlaylist == null) {
-            var availableSongs = Media.getContentRefIter({:contentType => Media.CONTENT_TYPE_AUDIO});
+        var tempPlaylist = storage.getValue(keys.PLAYLIST_TO_PLAY);
 
-            mPlaylist = [];
+        // Get pl to play
+        //var playlistToPlay = storage.getValue(keys.PLAYLIST_TO_PLAY);
+        
+        var playlistToPlay = storage.getValue(keys.PLAYLISTS_JSON)[4];
+        
+        mPlaylist = [];
+        // If null then get all songs
+        if (playlistToPlay == null) {
+        	var availableSongs = Media.getContentRefIter({:contentType => Media.CONTENT_TYPE_AUDIO});
+        	
             if (availableSongs != null) {
+            	System.println("Nnei prazdne");
                 var song = availableSongs.next();
                 while (song != null) {
                     mPlaylist.add(song.getId());
                     song = availableSongs.next();
                 }
+            } else {
+            	System.println("je prazdne");
             }
         } else {
-            mPlaylist = new [tempPlaylist.size()];
-            for (var idx = 0; idx < mPlaylist.size(); ++idx) {
-                mPlaylist[idx] = tempPlaylist[idx];
-            }
+        	var songResIds = storage.getValue(keys.SONG_RES_ID);
+        
+        	var songIds = playlistToPlay["songsIds"];
+        	for (var i = 0; i < songIds.size(); i++) {
+        		mPlaylist.add(songResIds[songIds[i]]);
+        	}
         }
+        
+        System.println("aaa");
     }
-
 }

@@ -34,11 +34,6 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
         return true;
     }
 
-    // Called when the user chooses to cancel an active sync.
-    function onStopSync() {
-        Communications.cancelAllRequests();
-        Media.notifySyncComplete(null);
-    }
     // Get one song to play by API id
     function getSong(callback, id) {
     
@@ -78,29 +73,7 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     	
         getSong(method(:saveSongDataCallback), id);
     }
-    // Get list of playlists from API
-    function getPlaylists(callback) {
-    
-    	var url = API_DEV + "/playlist/watch";  	
-		
-	    var params = {};
-	    
-		var headers = {
-			//"Authorization" => token
-			//"Content-Type" => "asd"
-			};
-		
-	    var options = {
-	    	:headers => headers,
-	    	:method => Communications.HTTP_REQUEST_METHOD_GET,
-	    	:responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
-	    };
-	   
-	   	var context = null;
-	   	
-	   	var delegate = new RequestHandler(callback, context);
-        delegate.makeWebRequest(url, params, options);
-    }
+    // Get list of song and playlists
 	function getLists(callback) {
     
     	var url = APIConstants.API_DEV + "/watch";  	
@@ -127,6 +100,8 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     
     function getListsCallback(responseType, data) {
     	if(responseType != 200) {
+    		System.println("Cant get list");
+    		Media.notifySyncComplete("Cant get list");
     		return;
     	}
     	mSongToSync = 0;
@@ -136,33 +111,32 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     	
     	mSongToSync = mSongsDownList.size();
     	
-    	System.println("ahoj");
+    	storage.setValue(keys.PLAYLISTS_JSON, data["playlists"]);
+    	storage.setValue(keys.SONGS_JSON, data["songs"]);
+    	
     	if (mSongDelList.size() > 0) {
     		System.println("del s");
     		deleteSongs();
     	}
-    	if (mSongsDownList.size() > 0) {
-    		System.println("down s");
-    		syncNextSong();
-    	}
-    	if (mSongDelList.size() > 0 || mSongToSync > 0) {
-    		System.println("sync");
-    		storage.setValue(keys.SONGS_JSON, data["songs"]);
-    		storage.setValue(keys.PLAYLISTS_JSON, data["playlists"]);
-    	} 
-    	else {
-    		Media.notifySyncComplete(null);
-			return;
-    	}   	
     	
     	if (mSongDelList.size() > 0 && mSongToSync == 0) {
 			Media.notifySyncComplete(null);
 			return;
     	}
+    	
+    	if (mSongDelList.size() == 0 && mSongsDownList.size() == 0) {
+    		Media.notifySyncComplete(null);
+			return;
+    	}
+    	
+    	if (mSongsDownList.size() > 0) {
+    		System.println("down s");
+    		syncNextSong();
+    	} 	
     }
 	// Get songs to delete
 	function getSongsToDel(songsData) {
-		var songs = storage.getValue(keys.SONGS_JSON);
+		/*var songs = storage.getValue(keys.SONGS_JSON);
 		if (songs == null) {
 			return [];
 		}
@@ -179,12 +153,31 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     			if (!inArray) {
     				songsToDel.add(songs[i]);
     			}
+    	}*/
+    	var songs = storage.getValue(keys.SONG_RES_ID);
+		if (songs == null) {
+			return [];
+		}
+		var songsToDel = [];
+		
+		for (var i = 0; i < songs.size(); i++) {
+    			var inArray = false;
+    			var keys = songs.keys();
+    			for (var j = 0; j < songsData.size(); j++) {
+    				if (keys[i] == songsData[j]["id"]) {
+    					inArray = true;
+    					break;
+    				}
+    			}
+    			if (!inArray) {
+    				songsToDel.add(songs[i]);
+    			}
     	}
     	return songsToDel;
 	}
 	// Get songs to download
 	function getSongsToDown(songsData) {
-		var songs = storage.getValue(keys.SONGS_JSON);
+		/*var songs = storage.getValue(keys.SONGS_JSON);
 		if (songs == null) {
 			return songsData;
 		}
@@ -194,6 +187,24 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     			var inArray = false;
     			for (var j = 0; j < songs.size(); j++) {
     				if (songs[j]["id"] == songsData[i]["id"]) {
+    					inArray = true;
+    					break;
+    				}
+    			}
+    			if (!inArray) {
+    				songsToAdd.add(songsData[i]);
+    			}
+    	}*/
+    	var songs = storage.getValue(keys.SONG_RES_ID);
+    	if (songs == null) {
+			return songsData;
+		}
+		var songsToAdd = [];
+    	for (var i = 0; i < songsData.size(); i++) {
+    			var inArray = false;
+    			var keys = songs.keys();    			
+    			for (var j = 0; j < songs.size(); j++) {
+    				if (keys[j] == songsData[i]["id"]) {
     					inArray = true;
     					break;
     				}
@@ -212,18 +223,23 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 		if (songResId == null || songResId.size() == 0) {
 			return;
 		} 
-		for(var i = 0; i < mSongDelList.size(); i++) {
+		for(var i = 0; i < mSongDelList.size(); i++) {		
 			//System.println(mSongDelList[i]["id"]);
 			
 			// Deletes media by resID
-			//Media.deleteCachedItem(songResId[i]["id"]);
-			//songResId.remove(mSongDelList[i]["id"]);			
+			var songId = mSongDelList[i]["id"];
+			
+			Media.deleteCachedItem(songResId[songId]);
+			songResId.remove(songId);			
 		}
+		mSongDelList = [];
 	}
 	// Handles song download callback
 	function saveSongDataCallback(responseType, data, context) {
 		if (responseType != 200) {
-			return;
+			System.println("Cant down song");
+    		Media.notifySyncComplete("Cant down song");
+    		return;
 		}
 		
 		var songResId = storage.getValue(keys.SONG_RES_ID);
@@ -249,4 +265,14 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 
         Media.notifySyncProgress(progress);
     }
+    // When sync is cancelled
+    function onStopSync() {
+    	storage.deleteValue(keys.SONGS_JSON);
+    	storage.deleteValue(keys.PLAYLISTS_JSON);
+    	storage.deleteValue(keys.SONG_RES_ID);
+    	
+    	Communications.cancelAllRequests();
+        Media.notifySyncComplete("Sync has been calcelled");
+    }
+    
 }
