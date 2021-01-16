@@ -43,7 +43,8 @@ class GarmusicContentIterator extends Media.ContentIterator {
        
         profile.playbackControls = [
             PLAYBACK_CONTROL_NEXT,
-            PLAYBACK_CONTROL_PREVIOUS
+            PLAYBACK_CONTROL_PREVIOUS,
+             Media.PLAYBACK_CONTROL_REPEAT
         ];
 
         return profile;
@@ -123,13 +124,15 @@ class GarmusicContentIterator extends Media.ContentIterator {
     // Gets the songs to play. If no playlist is available then all the songs in the
     // system are played.
     function initializePlaylist() {
-        var tempPlaylist = storage.getValue(keys.PLAYLIST_TO_PLAY);
-
         // Get pl to play
-        //var playlistToPlay = storage.getValue(keys.PLAYLIST_TO_PLAY);
+        var playlistToPlayId = storage.getValue(keys.PLAYLIST_TO_PLAY_ID);
         
-        var playlistToPlay = storage.getValue(keys.PLAYLISTS_JSON)[4];
+        var playlistToPlay = null;
         
+        if (playlistToPlayId != null) {
+        	playlistToPlay = storage.getValue(keys.PLAYLISTS_JSON)[playlistToPlayId];
+        }
+
         mPlaylist = [];
         // If null then get all songs
         if (playlistToPlay == null) {

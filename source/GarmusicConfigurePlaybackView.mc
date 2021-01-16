@@ -38,6 +38,15 @@ class GarmusicConfigurePlaybackView extends WatchUi.View {
     function onShow() {
     	var menu = new WatchUi.Menu2({:title=>"Playlists"});
 
+		menu.addItem(
+				new MenuItem(
+					"Play all",
+					null,
+					null,
+					{}
+				)
+			);
+	
 		for (var i = 0; i < mPlaylists.size(); i++) {
 			menu.addItem(
 				new MenuItem(
@@ -49,7 +58,7 @@ class GarmusicConfigurePlaybackView extends WatchUi.View {
 			);
 		}
 		// Create a new Menu2InputDelegate
-		var delegate = new GarmusicConfigurePlaybackDelegate(); // a WatchUi.Menu2InputDelegate
+		var delegate = new GarmusicConfigurePlaybackMenuDelegate(); // a WatchUi.Menu2InputDelegate
 
 		// Push the Menu2 View set up in the initializer
 		WatchUi.pushView(menu, delegate, WatchUi.SLIDE_IMMEDIATE);
