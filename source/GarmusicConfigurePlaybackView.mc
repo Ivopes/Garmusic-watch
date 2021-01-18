@@ -1,6 +1,7 @@
 using Toybox.WatchUi;
 using Toybox.Application.Storage as storage;
 using StorageKeys as keys;
+using MenuIds as ids;
 
 class GarmusicConfigurePlaybackView extends WatchUi.View {
 
@@ -36,27 +37,35 @@ class GarmusicConfigurePlaybackView extends WatchUi.View {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
-    	var menu = new WatchUi.Menu2({:title=>"Playlists"});
+    	var menu = new WatchUi.Menu2({:title=>"Configuration"});
 
 		menu.addItem(
 				new MenuItem(
-					"Play all",
+					"Configure player",
 					null,
-					null,
+					ids.CONFIGURE_PLAYER,
 					{}
 				)
-			);
-	
-		for (var i = 0; i < mPlaylists.size(); i++) {
-			menu.addItem(
+		);
+
+		menu.addItem(
 				new MenuItem(
-					mPlaylists[i],
+					"Pick Playlists to sync",
 					null,
-					mPlaylists[i],
+					ids.PLAYLISTS_TO_SYNC,
 					{}
 				)
-			);
-		}
+		);
+
+		menu.addItem(
+				new MenuItem(
+					"Play playlists",
+					null,
+					ids.PLAYLISTS_TO_PLAY,
+					{}
+				)
+		);
+	
 		// Create a new Menu2InputDelegate
 		var delegate = new GarmusicConfigurePlaybackMenuDelegate(); // a WatchUi.Menu2InputDelegate
 

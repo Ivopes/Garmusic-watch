@@ -41,11 +41,25 @@ class GarmusicContentIterator extends Media.ContentIterator {
     function getPlaybackProfile() {
         var profile = new Media.PlaybackProfile();
        
-        profile.playbackControls = [
-            PLAYBACK_CONTROL_NEXT,
-            PLAYBACK_CONTROL_PREVIOUS,
-             Media.PLAYBACK_CONTROL_REPEAT
-        ];
+		var settings = storage.getValue(keys.SETTINGS);
+		
+		if (settings == null) {
+			settings = getDefaultSettings();
+		}
+		
+       	var keys;
+       	var sett = [];
+       	
+       	keys = settings.keys();
+       	for (var i = 0; i < settings.size(); i++) {
+       		if (settings[keys[i]]) {
+       			sett.add(keys[i]);
+       		}
+       	}
+       
+        profile.playbackControls = sett;
+
+        profile.playbackControls = sett;
 
         return profile;
     }
@@ -53,10 +67,8 @@ class GarmusicContentIterator extends Media.ContentIterator {
     // Get the next media content object.
     function next() {
     	if (mSongIndex + 1 >= mPlaylist.size()) {
-    		 System.println("next End");
     		return null;
     	}
-    	 System.println("next");
     	mSongIndex++;
     	
     	// Get Id of song
@@ -70,10 +82,8 @@ class GarmusicContentIterator extends Media.ContentIterator {
     // Get the next media content object without incrementing the iterator.
     function peekNext() {
      	if (mSongIndex + 1 >= mPlaylist.size()) {
-    	 System.println("next peek End");
     		return null;
     	}
-    	 System.println("next peek");
     	// Get Id of song
     	var songResId = mPlaylist[mSongIndex+1];
     	// Get Song
@@ -85,10 +95,8 @@ class GarmusicContentIterator extends Media.ContentIterator {
     // Get the previous media content object without decrementing the iterator.
     function peekPrevious() {
     	if (mSongIndex  <= 0) {
-    	 System.println("prev peek End");
     		return null;
     	}
-    	 System.println("prev peek");
     	// Get Id of song
     	var songResId = mPlaylist[mSongIndex-1];
     	// Get Song
@@ -101,10 +109,9 @@ class GarmusicContentIterator extends Media.ContentIterator {
     function previous() {
     
     	if (mSongIndex  <= 0) {
-    	 System.println("prev End");
+    		
     		return null;
     	}
-    	 System.println("prev");
     	mSongIndex--;
     	// Get Id of song
     	var songResId = mPlaylist[mSongIndex];
@@ -116,7 +123,6 @@ class GarmusicContentIterator extends Media.ContentIterator {
 
     // Determine if playback is currently set to shuffle.
     function shuffling() {
-    	System.println("shufle");
      	return mShuffling;
         //return false;
     }
@@ -130,7 +136,14 @@ class GarmusicContentIterator extends Media.ContentIterator {
         var playlistToPlay = null;
         
         if (playlistToPlayId != null) {
-        	playlistToPlay = storage.getValue(keys.PLAYLISTS_JSON)[playlistToPlayId];
+        	//playlistToPlay = storage.getValue(keys.PLAYLISTS_JSON)[playlistToPlayId];
+        	var playlists = storage.getValue(keys.PLAYLISTS_JSON);
+        	for (var i = 0; i < playlists.size(); i++) {
+        		if (playlists[i]["id"] == playlistToPlayId) {
+        			playlistToPlay = playlists[i];
+        			break;
+        		}
+        	}
         }
 
         mPlaylist = [];
@@ -139,14 +152,12 @@ class GarmusicContentIterator extends Media.ContentIterator {
         	var availableSongs = Media.getContentRefIter({:contentType => Media.CONTENT_TYPE_AUDIO});
         	
             if (availableSongs != null) {
-            	System.println("Nnei prazdne");
                 var song = availableSongs.next();
                 while (song != null) {
                     mPlaylist.add(song.getId());
                     song = availableSongs.next();
                 }
             } else {
-            	System.println("je prazdne");
             }
         } else {
         	var songResIds = storage.getValue(keys.SONG_RES_ID);
@@ -156,7 +167,20 @@ class GarmusicContentIterator extends Media.ContentIterator {
         		mPlaylist.add(songResIds[songIds[i]]);
         	}
         }
-        
-        System.println("aaa");
+    }
+    
+    function getDefaultSettings() {
+    	var settings = {};
+		settings[Media.PLAYBACK_CONTROL_NEXT] = true;
+   		settings[Media.PLAYBACK_CONTROL_PREVIOUS] = true;
+   		settings[Media.PLAYBACK_CONTROL_SHUFFLE] = false;
+   		settings[Media.PLAYBACK_CONTROL_SKIP_FORWARD] = false;
+   		settings[Media.PLAYBACK_CONTROL_SKIP_BACKWARD] = false;
+   		settings[Media.PLAYBACK_CONTROL_REPEAT] = false;
+   		settings[Media.PLAYBACK_CONTROL_RATING] = false;
+   		
+   		storage.setValue(keys.SETTINGS, settings);
+   		
+   		return settings;
     }
 }
