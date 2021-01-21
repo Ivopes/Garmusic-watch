@@ -68,7 +68,7 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     		Media.notifySyncComplete(null);
     		return;
     	}
-    	var id = mSongsDownList[0]["id"];
+    	var id = mSongsDownList[0];
     	System.println("syncuju: " + id);
     	
         getSong(method(:saveSongDataCallback), id);
@@ -107,12 +107,15 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     	mSongToSync = 0;
     	mSongDelList = getSongsToDel(data["songs"]);
     	
-    	mSongsDownList = getSongsToDown(data["songs"]);
+    	var songsToDown = getSongsToDownFromPlaylists(data["playlists"]);
+ 
+    	mSongsDownList = getNotDownloadedSongs(songsToDown);
     	
     	mSongToSync = mSongsDownList.size();
     	
     	storage.setValue(keys.PLAYLISTS_JSON, data["playlists"]);
     	storage.setValue(keys.SONGS_JSON, data["songs"]);
+    	
     	
     	if (mSongDelList.size() > 0) {
     		System.println("del s");
@@ -136,24 +139,6 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     }
 	// Get songs to delete
 	function getSongsToDel(songsData) {
-		/*var songs = storage.getValue(keys.SONGS_JSON);
-		if (songs == null) {
-			return [];
-		}
-		var songsToDel = [];
-		
-		for (var i = 0; i < songs.size(); i++) {
-    			var inArray = false;
-    			for (var j = 0; j < songsData.size(); j++) {
-    				if (songs[i]["id"] == songsData[j]["id"]) {
-    					inArray = true;
-    					break;
-    				}
-    			}
-    			if (!inArray) {
-    				songsToDel.add(songs[i]);
-    			}
-    	}*/
     	var songs = storage.getValue(keys.SONG_RES_ID);
 		if (songs == null) {
 			return [];
@@ -176,41 +161,23 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     	return songsToDel;
 	}
 	// Get songs to download
-	function getSongsToDown(songsData) {
-		/*var songs = storage.getValue(keys.SONGS_JSON);
-		if (songs == null) {
-			return songsData;
-		}
-		var songsToAdd = [];
-		
-		for (var i = 0; i < songsData.size(); i++) {
-    			var inArray = false;
-    			for (var j = 0; j < songs.size(); j++) {
-    				if (songs[j]["id"] == songsData[i]["id"]) {
-    					inArray = true;
-    					break;
-    				}
-    			}
-    			if (!inArray) {
-    				songsToAdd.add(songsData[i]);
-    			}
-    	}*/
+	function getNotDownloadedSongs(songsIds) {
     	var songs = storage.getValue(keys.SONG_RES_ID);
     	if (songs == null) {
-			return songsData;
+			return songsIds;
 		}
 		var songsToAdd = [];
-    	for (var i = 0; i < songsData.size(); i++) {
+    	for (var i = 0; i < songsIds.size(); i++) {
     			var inArray = false;
     			var keys = songs.keys();    			
     			for (var j = 0; j < songs.size(); j++) {
-    				if (keys[j] == songsData[i]["id"]) {
+    				if (keys[j] == songsIds[i]) {
     					inArray = true;
     					break;
     				}
     			}
     			if (!inArray) {
-    				songsToAdd.add(songsData[i]);
+    				songsToAdd.add(songsIds[i]);
     			}
     	}
     	return songsToAdd;
@@ -275,4 +242,28 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
         Media.notifySyncComplete("Sync has been calcelled");
     }
     
+    function getSongsToDownFromPlaylists(playlistsData) {   	
+    	var songsIds = [];
+    	
+    	for (var i = 0; i < playlistsData.size(); i++) {
+    		if (!playlistsData[i]["sync"]) {
+    			continue;
+    		}
+    	
+    		for (var j = 0; j < playlistsData[i]["songsIds"].size(); j++) {
+    			var inArray = false;
+    			for (var k = 0; k < songsIds.size(); k++) {
+    				if (playlistsData[i]["songsIds"][j] == songsIds[k]) {
+    					inArray = true;
+    					break;
+    				}
+    			}
+    			if (!inArray) {
+    				songsIds.add(playlistsData[i]["songsIds"][j]);
+    			}
+    		}
+    	}
+    	
+    	return songsIds;
+    }
 }
