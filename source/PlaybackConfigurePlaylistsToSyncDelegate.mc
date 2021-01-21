@@ -5,7 +5,8 @@ using Toybox.Media;
 
 class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegate {
 
-
+	// Was there a change
+	var changed = false;
 
     function initialize() {
         Menu2InputDelegate.initialize();
@@ -13,6 +14,8 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
     }
 
     function onSelect(item) {
+        
+        changed = true;
         
         var name = item.getId();
         
@@ -33,8 +36,9 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
     }
     
     function onDone() {
-    	
-    	sendSyncData(method(:sendSyncDataCallback));
+    	if (changed) {   	
+    		sendSyncData(method(:sendSyncDataCallback));
+    	}
     	popView(WatchUi.SLIDE_IMMEDIATE);
     }
     
@@ -45,9 +49,26 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
     		return;
     	}
     	
-    	var url = APIConstants.API_DEV + "/playlist";   
+		// Add sync settings to playlists array dict
+    	var settings = storage.getValue(keys.PLAYLIST_SYNC_SETTINGS);
+    	
+		var keys = settings.keys();
+		
+    	for (var i = 0; i < playlists.size(); i++) {
+    		for (var j = 0; j < keys.size(); j++) {
+    			if (playlists[i]["id"] == keys[j]) {
+    				playlists[i].put("sync", settings[keys[j]]);
+    				break;
+    			}
+    		}
+    	}    	
+    	
+    	// Request itself
+    	var url = APIConstants.API_DEV + "/watch";   
     		
-	    var params = playlists;
+	    var params = {
+	    	"playlists" => playlists
+	    };
 	    
 		var headers = {
 			//"Authorization" => token
