@@ -1,4 +1,6 @@
 using Toybox.WatchUi;
+using Toybox.Media;
+using MenuIds as ids;
 
 // This is the View that is used to configure the songs
 // to sync. New pages may be pushed as needed to complete
@@ -18,6 +20,33 @@ class GarmusicConfigureSyncView extends WatchUi.View {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() {
+    	var menu = new WatchUi.Menu2({:title=>"Account"});
+
+		menu.addItem(
+				new MenuItem(
+					"Login",
+					null,
+					ids.LOGIN,
+					{}
+				)
+		);
+
+		menu.addItem(
+				new MenuItem(
+					"Logout",
+					null,
+					ids.LOGOUT,
+					{}
+				)
+		);
+
+	
+		// Create a new Menu2InputDelegate
+		var delegate = new GarmusicConfigureSyncDelegate(); // a WatchUi.Menu2InputDelegate
+
+		// Push the Menu2 View set up in the initializer
+		WatchUi.pushView(menu, delegate, WatchUi.SLIDE_IMMEDIATE);
+		return false;
     }
 
     // Update the view

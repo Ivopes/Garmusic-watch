@@ -15,7 +15,7 @@ module AuthController {
 	 	var resultUrl = "https://localhost:44303/songs";
 	 	var resultType = Communications.OAUTH_RESULT_TYPE_URL;
 	 	var resultKeys = {"myCode"=>"value"};
-var params = {
+		var params = {
        "scope" => Communications.encodeURL("https://localhost:44303/login"),
        "redirect_uri" => "https://www.google.com",
        "response_type" => "code",

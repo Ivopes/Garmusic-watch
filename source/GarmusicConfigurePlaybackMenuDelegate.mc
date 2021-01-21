@@ -29,8 +29,7 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
         mPlaylists = playlists;
     }
 
-    function onSelect(item) {
-        
+    function onSelect(item) { 
         switch (item.getId()) {
         	case ids.CONFIGURE_PLAYER: {
         		pushConfPlayer();
@@ -45,7 +44,6 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
         		break;
         	}
         }
-        
     }
     // Pushes view for picking a playlist to play
     function pushToPlay() {
