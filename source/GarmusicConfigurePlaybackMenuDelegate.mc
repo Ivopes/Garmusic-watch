@@ -88,13 +88,13 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
 			settings = getDefaultSettings();
 		}
 		
-		menu.addItem(new ToggleMenuItem("Shuffle", null, "shuffle", settings[Media.PLAYBACK_CONTROL_SHUFFLE], {}));
-		menu.addItem(new ToggleMenuItem("Previous", null, "prev", settings[Media.PLAYBACK_CONTROL_PREVIOUS], {}));
-		menu.addItem(new ToggleMenuItem("Next", null, "next", settings[Media.PLAYBACK_CONTROL_NEXT], {}));
-		menu.addItem(new ToggleMenuItem("Skip forward", null, "skipF", settings[Media.PLAYBACK_CONTROL_SKIP_FORWARD], {}));
-		menu.addItem(new ToggleMenuItem("Skip Backward", null, "skipB", settings[Media.PLAYBACK_CONTROL_SKIP_BACKWARD], {}));
-		menu.addItem(new ToggleMenuItem("Repeat", null, "rep", settings[Media.PLAYBACK_CONTROL_REPEAT], {}));
-		menu.addItem(new ToggleMenuItem("Rating", null, "rat", settings[Media.PLAYBACK_CONTROL_RATING], {}));
+		menu.addItem(new Media.ToggleMenuItem("Shuffle", null, "shuffle", settings[Media.PLAYBACK_CONTROL_SHUFFLE], {}));
+		menu.addItem(new Media.ToggleMenuItem("Previous", null, "prev", settings[Media.PLAYBACK_CONTROL_PREVIOUS], {}));
+		menu.addItem(new Media.ToggleMenuItem("Next", null, "next", settings[Media.PLAYBACK_CONTROL_NEXT], {}));
+		menu.addItem(new Media.ToggleMenuItem("Skip forward", null, "skipF", settings[Media.PLAYBACK_CONTROL_SKIP_FORWARD], {}));
+		menu.addItem(new Media.ToggleMenuItem("Skip Backward", null, "skipB", settings[Media.PLAYBACK_CONTROL_SKIP_BACKWARD], {}));
+		menu.addItem(new Media.ToggleMenuItem("Repeat", null, "rep", settings[Media.PLAYBACK_CONTROL_REPEAT], {}));
+		menu.addItem(new Media.ToggleMenuItem("Rating", null, "rat", settings[Media.PLAYBACK_CONTROL_RATING], {}));
 		
 		WatchUi.pushView(menu, delegate, WatchUi.SLIDE_IMMEDIATE);
     }
@@ -115,7 +115,7 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
     }
     
     function pushToPlSyncConf() {
-    	var menu = new WatchUi.Menu2({:title=>"Playlist to sync"});
+    	var menu = new WatchUi.CheckboxMenu({:title=>"Playlist to sync"});
     	
 		var playlists = storage.getValue(keys.PLAYLISTS_JSON);
 
@@ -134,28 +134,11 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
 			sett = settings;
 		} else {
 			var keys = settings.keys();
-			
-			/*for (var i = 0; i < settings.size(); i++) {
-				var inArray = false;
-				for (var j = 0; j < playlists.size(); j++) {
-					if (keys[i] ==playlists[j]["id"]) {
-						sett.add(true);
-						inArray = true;
-						break;
-					}
-				}
-				if (!inArray) {
-					sett.add(false);
-				}
-			}*/
-			/*for (var i = 0; i < settings.size(); i++) {
-				sett[settings[keys[i]]["id"]] = false;
-			}*/
 		}
 
 		for (var i = 0; i < mPlaylists.size(); i++) {
 			menu.addItem(
-				new ToggleMenuItem(
+				new CheckboxMenuItem(
 					mPlaylists[i]["name"],
 					null,
 					mPlaylists[i]["name"],
@@ -165,7 +148,7 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
 			);
 		}
 		// Create a new Menu2InputDelegate
-		var delegate = new PlaybackConfigurePlaylistsToSync(); // a WatchUi.Menu2InputDelegate
+		var delegate = new PlaybackConfigurePlaylistsToSyncDelegate(); // a WatchUi.Menu2InputDelegate
 
 		// Push the Menu2 View set up in the initializer
 		WatchUi.pushView(menu, delegate, WatchUi.SLIDE_IMMEDIATE);
