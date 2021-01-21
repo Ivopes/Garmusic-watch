@@ -18,13 +18,6 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
         if (playlists == null) {
         	playlists = [];
         }
-           
-        mPlaylists = [];  
-        
-        // Get names of playlists
-        for (var i = 0; i < playlists.size(); i++) {
-        	mPlaylists.add(playlists[i]["name"]);
-        }
         
         mPlaylists = playlists;
     }
@@ -116,31 +109,16 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
     	var menu = new WatchUi.CheckboxMenu({:title=>"Playlist to sync"});
     	
 		var playlists = storage.getValue(keys.PLAYLISTS_JSON);
-
-		var settings = storage.getValue(keys.PLAYLIST_SYNC_SETTINGS);
 		
-		// Setting to apply on menu
-		var sett = null;
+		mPlaylists = playlists;
 		
-		// If null then set all to false
-		if (settings == null) {
-			settings = {};
-			for (var i = 0; i < playlists.size(); i++) {
-				settings[playlists[i]["id"]] = false;
-			}
-			storage.setValue(keys.PLAYLIST_SYNC_SETTINGS, settings);
-			sett = settings;
-		} else {
-			var keys = settings.keys();
-		}
-
 		for (var i = 0; i < mPlaylists.size(); i++) {
 			menu.addItem(
 				new CheckboxMenuItem(
 					mPlaylists[i]["name"],
 					null,
 					mPlaylists[i]["name"],
-					settings[mPlaylists[i]["id"]],
+					mPlaylists[i]["sync"],
 					{}
 				)
 			);

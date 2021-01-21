@@ -6,37 +6,42 @@ using Toybox.Media;
 class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegate {
 
 	// Was there a change
-	var changed = false;
+	var changed;
 
     function initialize() {
         Menu2InputDelegate.initialize();
        
+       	var playlists = storage.getValue(keys.PLAYLISTS_JSON);
+       	
+       	changed = new[playlists.size()];
+       	
+       	for (var i = 0; i< changed.size(); i++) {
+       		changed[i] = false;
+       	}
+    
     }
 
     function onSelect(item) {
-        
-        changed = true;
-        
         var name = item.getId();
         
         var playlists = storage.getValue(keys.PLAYLISTS_JSON);
-        
-        var settings = storage.getValue(keys.PLAYLIST_SYNC_SETTINGS);
 
 		for (var i = 0; i < playlists.size(); i++) {
 			if (playlists[i]["name"].equals(name)) {
-				settings[playlists[i]["id"]] = item.isChecked();
+			
+				playlists[i]["sync"] = item.isChecked();
+				
+				changed[i] = !changed[i];
+				
 				break;
 			}
 		}
 		
-		storage.setValue(keys.PLAYLIST_SYNC_SETTINGS, settings);
-		
-		
+		storage.setValue(keys.PLAYLISTS_JSON, playlists);
     }
     
     function onDone() {
-    	if (changed) {   	
+    	if (isChaged()) {   	
     		sendSyncData(method(:sendSyncDataCallback));
     	}
     	popView(WatchUi.SLIDE_IMMEDIATE);
@@ -50,7 +55,7 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
     	}
     	
 		// Add sync settings to playlists array dict
-    	var settings = storage.getValue(keys.PLAYLIST_SYNC_SETTINGS);
+    	/*var settings = storage.getValue(keys.PLAYLIST_SYNC_SETTINGS);
     	
 		var keys = settings.keys();
 		
@@ -61,8 +66,8 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
     				break;
     			}
     		}
-    	}    	
-    	
+    	}   */ 	
+
     	// Request itself
     	var url = APIConstants.API_DEV + "/watch";   
     		
@@ -88,5 +93,14 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
     
     function sendSyncDataCallback(resposeType, data) {
     	System.println(resposeType);
+    }
+    
+    function isChaged() {
+    	for (var i = 0; i< changed.size(); i++) {
+       		if (changed[i]) {
+       			return true;
+       		}
+       	}
+    	return false;
     }
 }
