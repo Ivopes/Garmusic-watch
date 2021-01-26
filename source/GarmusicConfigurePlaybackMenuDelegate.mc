@@ -71,7 +71,7 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
     function pushConfPlayer() {
 		var delegate = new PlaybackConfigurePlayerDelegate();
 
-		var menu = new WatchUi.Menu2({:title=>"Player configuration"});
+		var menu = new WatchUi.CheckboxMenu({:title=>"Player configuration"});
 
 		var settings = storage.getValue(keys.SETTINGS);
 		
@@ -79,13 +79,13 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
 			settings = getDefaultSettings();
 		}
 		
-		menu.addItem(new Media.ToggleMenuItem("Shuffle", null, "shuffle", settings[Media.PLAYBACK_CONTROL_SHUFFLE], {}));
-		menu.addItem(new Media.ToggleMenuItem("Previous", null, "prev", settings[Media.PLAYBACK_CONTROL_PREVIOUS], {}));
-		menu.addItem(new Media.ToggleMenuItem("Next", null, "next", settings[Media.PLAYBACK_CONTROL_NEXT], {}));
-		menu.addItem(new Media.ToggleMenuItem("Skip forward", null, "skipF", settings[Media.PLAYBACK_CONTROL_SKIP_FORWARD], {}));
-		menu.addItem(new Media.ToggleMenuItem("Skip Backward", null, "skipB", settings[Media.PLAYBACK_CONTROL_SKIP_BACKWARD], {}));
-		menu.addItem(new Media.ToggleMenuItem("Repeat", null, "rep", settings[Media.PLAYBACK_CONTROL_REPEAT], {}));
-		menu.addItem(new Media.ToggleMenuItem("Rating", null, "rat", settings[Media.PLAYBACK_CONTROL_RATING], {}));
+		menu.addItem(new CheckboxMenuItem("Shuffle", null, "shuffle", settings[Media.PLAYBACK_CONTROL_SHUFFLE], {}));
+		menu.addItem(new CheckboxMenuItem("Previous", null, "prev", settings[Media.PLAYBACK_CONTROL_PREVIOUS], {}));
+		menu.addItem(new CheckboxMenuItem("Next", null, "next", settings[Media.PLAYBACK_CONTROL_NEXT], {}));
+		menu.addItem(new CheckboxMenuItem("Skip forward", null, "skipF", settings[Media.PLAYBACK_CONTROL_SKIP_FORWARD], {}));
+		menu.addItem(new CheckboxMenuItem("Skip Backward", null, "skipB", settings[Media.PLAYBACK_CONTROL_SKIP_BACKWARD], {}));
+		menu.addItem(new CheckboxMenuItem("Repeat", null, "rep", settings[Media.PLAYBACK_CONTROL_REPEAT], {}));
+		menu.addItem(new CheckboxMenuItem("Rating", null, "rat", settings[Media.PLAYBACK_CONTROL_RATING], {}));
 		
 		WatchUi.pushView(menu, delegate, WatchUi.SLIDE_IMMEDIATE);
     }
