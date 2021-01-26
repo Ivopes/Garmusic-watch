@@ -1,4 +1,6 @@
 using Toybox.WatchUi;
+using Toybox.Application.Storage as storage;
+using Toybox.Media;
 using MenuIds as ids;
 using APIConstants;
 
@@ -17,6 +19,7 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
         	}
         	case ids.LOGOUT: {
         		System.println("logout");
+        		logout();
         		break;
         	}
         }
@@ -55,5 +58,13 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
     
     function loginCallback(reponseType) {
     	System.println(reponseType.data);
+    }
+    
+    function logout() {
+    	System.println("logout and delete");
+    	
+    	storage.clearValues();
+    	
+    	Media.resetContentCache();
     }
 }
