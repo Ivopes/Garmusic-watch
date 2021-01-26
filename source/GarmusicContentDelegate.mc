@@ -43,18 +43,18 @@ class GarmusicContentDelegate extends Media.ContentDelegate {
 
     // Respond to a command to turn shuffle on or off
     function onShuffle() {
+    	System.println("shuffle");
+    }
+
+	function onRepeat() {
+    	System.println("repeat");
     }
 
     // Handles a notification from the system that an event has
     // been triggered for the given song
     function onSong(contentRefId, songEvent, playbackPosition) {
-
-    }
-
-    
-    // Helper function to get the name of a song for reporting that certain functions were called
-    function getSongName(refId) {
-        var song = Media.getCachedContentObj(new Media.ContentRef(refId, Media.CONTENT_TYPE_AUDIO));
-        return song.getMetadata().title;
+		System.println(contentRefId);
+		System.println(songEvent);
+		System.println(playbackPosition);
     }
 }
