@@ -19,8 +19,6 @@ class PlaybackPickPlaylistToPlayDelegate extends WatchUi.Menu2InputDelegate {
     }
 
     function onSelect(item) {
-        
-        
         for (var i = 0; i < mPlaylists.size(); i++) {
         	if (mPlaylists[i]["name"].equals(item.getId())) {
 		        storage.setValue(keys.PLAYLIST_TO_PLAY_ID, mPlaylists[i]["id"]);
