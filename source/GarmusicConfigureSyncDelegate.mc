@@ -28,22 +28,16 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
     function login(callback) {
     
 	   	var requestUrl = "https://ivopes.github.io/";
-	   	
-		var requestParams = {
-				            //"client_id"=>"moje_id",
-				            //"response_type"=>"code",
-				         	};
+	   	//var requestUrl = "https://localhost:44303/login/watch";
 	
-	 	var resultUrl = "https://ivopes.github.io/redir.html";
+		var resultUrl = "https://ivopes.github.io/redir.html";
+		//var resultUrl = "https://localhost:44303/login";
 	 	
 	 	var resultType = Communications.OAUTH_RESULT_TYPE_URL;
 	 	
-	 	var resultKeys = {"code"=>"value"};
+	 	var resultKeys = {"token"=>"value"};
 	 	
-		var params = {
-	       //"response_type" => "code",
-	       // "client_id" => "123"
-	   };
+		var params = {};
      
      	Communications.registerForOAuthMessages(callback);
 
