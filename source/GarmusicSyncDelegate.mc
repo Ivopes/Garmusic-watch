@@ -20,12 +20,17 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 
     function initialize() {
         SyncDelegate.initialize();  
+
     }
 
     // Called when the system starts a sync of the app.
     // The app should begin to download songs chosen in the configure
     // sync view .
     function onStartSync() {
+    	if (storage.getValue(keys.OAUTH_TOKEN) == null) {
+    		Media.notifySyncComplete("Please log in first");
+    		return;
+    	}
     	
 		getLists(method(:getListsCallback));   
     }
@@ -41,8 +46,10 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 		
 	    var params = {};
 	    
+	    var token = storage.getValue(keys.OAUTH_TOKEN);
+	    
 		var headers = {
-			//"Authorization" => token
+			"Authorization" => "Bearer " + token
 			//"Content-Type" => "asd"
 			};
 		
@@ -80,8 +87,10 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 		System.println(url);
 	    var params = {};
 	    
+	    var token = storage.getValue(keys.OAUTH_TOKEN);
+	    
 		var headers = {
-			//"Authorization" => token
+			"Authorization" => "Bearer " + token
 			//"Content-Type" => "asd"
 			};
 		

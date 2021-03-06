@@ -63,7 +63,7 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
 	    };
 	    
 		var headers = {
-			//"Authorization" => token
+			"Authorization" => "Bearer " + token,
 			"Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON
 			};
 		

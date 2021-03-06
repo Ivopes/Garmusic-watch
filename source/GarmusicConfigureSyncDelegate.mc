@@ -3,6 +3,7 @@ using Toybox.Application.Storage as storage;
 using Toybox.Media;
 using MenuIds as ids;
 using APIConstants;
+using StorageKeys as keys;
 
 class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
 
@@ -26,12 +27,16 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
     }
     
     function login(callback) {
+    	if (storage.getValue(keys.OAUTH_TOKEN) != null) {
+    		return;
+    	}
     
-	   	var requestUrl = "https://ivopes.github.io/";
-	   	//var requestUrl = "https://localhost:44303/login/watch";
+    
+	   	//var requestUrl = "https://ivopes.github.io/";
+	   	var requestUrl = APIConstants.getUrl() + "/login/watch";
 	
-		var resultUrl = "https://ivopes.github.io/redir.html";
-		//var resultUrl = "https://localhost:44303/login";
+		//var resultUrl = "https://ivopes.github.io/redir.html";
+		var resultUrl = APIConstants.getApiUrl() + "/login";
 	 	
 	 	var resultType = Communications.OAUTH_RESULT_TYPE_URL;
 	 	
@@ -51,7 +56,10 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
     }
     
     function loginCallback(reponseType) {
-    	System.println(reponseType.data);
+    	System.println(reponseType);
+		System.println(reponseType.data);
+    	System.println(reponseType.data["code"]);
+    	storage.setValue(keys.OAUTH_TOKEN, "aaa");
     }
     
     function logout() {

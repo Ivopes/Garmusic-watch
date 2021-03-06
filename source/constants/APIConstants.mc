@@ -14,4 +14,12 @@ module APIConstants {
 	function getApiUrl() {
 	return API_PROD;
 	}
+	(:debug) 
+	function getUrl() {
+	return DEV;
+	}
+	(:release) 
+	function getUrl() {
+	return PROD;
+	}
 }
