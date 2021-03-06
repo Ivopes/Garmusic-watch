@@ -82,6 +82,10 @@ class GarmusicContentIterator extends Media.ContentIterator {
 
     // Get the next media content object without incrementing the iterator.
     function peekNext() {
+    	if (mPlaylist.size() == 0) {
+    		return null;
+    	}
+    
     	var temp = mSongIndex;
      	if (temp + 1 >= mPlaylist.size()) {
      		temp = -1;
@@ -97,12 +101,17 @@ class GarmusicContentIterator extends Media.ContentIterator {
 
     // Get the previous media content object without decrementing the iterator.
     function peekPrevious() {
+    	if (mPlaylist.size() == 0) {
+    		return null;
+    	}
+    
     	var temp = mSongIndex;
     	if (mSongIndex  <= 0) {
     		temp = 1;
     		//return null;
     	}
     	// Get Id of song
+
     	var songResId = mPlaylist[temp-1];
     	// Get Song
     	var song = Media.getCachedContentObj(new Media.ContentRef(songResId, Media.CONTENT_TYPE_AUDIO));

@@ -37,7 +37,7 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     // Get one song to play by API id
     function getSong(callback, id) {
     
-    	var url = APIConstants.API_DEV + "/song/file/" + id;   
+    	var url = APIConstants.getApiUrl() + "/song/file/" + id;   
 		
 	    var params = {};
 	    
@@ -76,7 +76,7 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     // Get list of song and playlists
 	function getLists(callback) {
     
-    	var url = APIConstants.API_DEV + "/watch";  	
+    	var url = APIConstants.getApiUrl() + "/watch";  	
 		System.println(url);
 	    var params = {};
 	    

@@ -56,7 +56,7 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
     	}
 
     	// Request itself
-    	var url = APIConstants.API_DEV + "/watch";   
+    	var url = APIConstants.getApiUrl() + "/watch";   
     		
 	    var params = {
 	    	"playlists" => playlists
