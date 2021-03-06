@@ -28,7 +28,7 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
     
     function login(callback) {
     	if (storage.getValue(keys.OAUTH_TOKEN) != null) {
-    		return;
+    		Media.startPlayback(null);
     	}
     
     
@@ -56,10 +56,13 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
     }
     
     function loginCallback(reponseType) {
-    	System.println(reponseType);
-		System.println(reponseType.data);
-    	System.println(reponseType.data["code"]);
-    	storage.setValue(keys.OAUTH_TOKEN, "aaa");
+    	if (reponseType.responseCode != 200) {
+    		return;
+    	}
+    	
+    	storage.setValue(keys.OAUTH_TOKEN, reponseType.data["value"]);
+    	
+    	Media.startPlayback(null);
     }
     
     function logout() {
@@ -68,5 +71,7 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
     	storage.clearValues();
     	
     	Media.resetContentCache();
+    	
+    	Media.startPlayback(null);
     }
 }
