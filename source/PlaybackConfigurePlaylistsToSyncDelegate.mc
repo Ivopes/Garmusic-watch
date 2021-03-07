@@ -66,6 +66,8 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
 	    	"playlists" => playlists
 	    };
 	    
+	    var token = storage.getValue(keys.OAUTH_TOKEN);
+	    
 		var headers = {
 			"Authorization" => "Bearer " + token,
 			"Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON

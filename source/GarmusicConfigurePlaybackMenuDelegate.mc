@@ -52,14 +52,16 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
 		);
 		for (var i = 0; i < mPlaylists.size(); i++) {
 
-			menu.addItem(
-				new MenuItem(
-					mPlaylists[i]["name"],
-					null,
-					mPlaylists[i]["name"],
-					{}
-				)
-			);
+			if (mPlaylists[i]["sync"]) {
+				menu.addItem(
+					new MenuItem(
+						mPlaylists[i]["name"],
+						null,
+						mPlaylists[i]["name"],
+						{}
+					)
+				);
+			}
 		}
 		// Create a new Menu2InputDelegate
 		var delegate = new PlaybackPickPlaylistToPlayDelegate(); // a WatchUi.Menu2InputDelegate
