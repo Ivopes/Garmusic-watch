@@ -18,6 +18,10 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
         		System.println("login");
         		break;
         	}
+        	case ids.START_SYNC: {
+        		Media.startSync();
+        		break;
+        	}
         	case ids.LOGOUT: {
         		System.println("logout");
         		logout();

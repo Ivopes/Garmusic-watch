@@ -33,6 +33,15 @@ class GarmusicConfigureSyncView extends WatchUi.View {
 						{}
 					)
 			);
+		} else {
+			menu.addItem(
+					new MenuItem(
+						"Sync",
+						null,
+						ids.START_SYNC,
+						{}
+					)
+			);
 		}
 
 		

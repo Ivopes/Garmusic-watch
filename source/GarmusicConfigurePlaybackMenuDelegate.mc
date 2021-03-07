@@ -110,6 +110,10 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
     	
 		var playlists = storage.getValue(keys.PLAYLISTS_JSON);
 		
+		 if (playlists == null) {
+        	playlists = [];
+        }
+		
 		mPlaylists = playlists;
 		
 		for (var i = 0; i < mPlaylists.size(); i++) {

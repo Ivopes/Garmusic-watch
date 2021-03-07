@@ -15,6 +15,10 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
        
        	playlists = storage.getValue(keys.PLAYLISTS_JSON);
        	
+       	 if (playlists == null) {
+        	playlists = [];
+        }
+       	
        	changed = new[playlists.size()];
        	
        	for (var i = 0; i< changed.size(); i++) {
