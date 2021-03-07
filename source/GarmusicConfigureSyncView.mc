@@ -1,6 +1,8 @@
 using Toybox.WatchUi;
 using Toybox.Media;
 using MenuIds as ids;
+using Toybox.Application.Storage as storage;
+using StorageKeys as keys;
 
 // This is the View that is used to configure the songs
 // to sync. New pages may be pushed as needed to complete
@@ -22,14 +24,18 @@ class GarmusicConfigureSyncView extends WatchUi.View {
     function onShow() {
     	var menu = new WatchUi.Menu2({:title=>"Account"});
 
-		menu.addItem(
-				new MenuItem(
-					"Login",
-					null,
-					ids.LOGIN,
-					{}
-				)
-		);
+		if (storage.getValue(keys.OAUTH_TOKEN) == null) {
+			menu.addItem(
+					new MenuItem(
+						"Login",
+						null,
+						ids.LOGIN,
+						{}
+					)
+			);
+		}
+
+		
 
 		menu.addItem(
 				new MenuItem(
