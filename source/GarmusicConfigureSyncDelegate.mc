@@ -19,6 +19,7 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
         		break;
         	}
         	case ids.START_SYNC: {
+        		System.println("Sync menu press");
         		Media.startSync();
         		break;
         	}

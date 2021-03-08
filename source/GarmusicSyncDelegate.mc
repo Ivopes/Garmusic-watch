@@ -1,7 +1,6 @@
 using Toybox.Communications;
 using Toybox.Media;
 using Toybox.Application.Storage as storage;
-using SongController;
 using APIConstants;
 using StorageKeys as keys;
 
@@ -31,7 +30,7 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     		Media.notifySyncComplete("Please log in first");
     		return;
     	}
-    	
+    	System.println("start sync");
 		getLists(method(:getListsCallback));   
     }
     // Called by the system to determine if the app needs to be synced.
@@ -84,7 +83,7 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 	function getLists(callback) {
     
     	var url = APIConstants.getApiUrl() + "/watch";  	
-		System.println(url);
+		//System.println(url);
 	    var params = {};
 	    
 	    var token = storage.getValue(keys.OAUTH_TOKEN);
@@ -113,6 +112,10 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     		Media.notifySyncComplete("Cant get list");
     		return;
     	}
+    	
+    	System.println(data);
+    	System.println(data["songs"]);
+    	System.println(data["playlists"]);
     	mSongToSync = 0;
     	mSongDelList = getSongsToDel(data["songs"]);
     	
@@ -122,12 +125,16 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     	
     	mSongToSync = mSongsDownList.size();
     	
+    	System.println(data);
+    	System.println(data["songs"]);
+    	System.println(data["playlists"]);
+    	System.println("ukladam");
     	storage.setValue(keys.PLAYLISTS_JSON, data["playlists"]);
     	storage.setValue(keys.SONGS_JSON, data["songs"]);
-    	
+    	System.println("ulozeno");
     	
     	if (mSongDelList.size() > 0) {
-    		System.println("del s");
+    		//System.println("del s");
     		deleteSongs();
     	}
     	
@@ -142,7 +149,7 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     	}
     	
     	if (mSongsDownList.size() > 0) {
-    		System.println("down s");
+    		//System.println("down s");
     		syncNextSong();
     	} 	
     }
