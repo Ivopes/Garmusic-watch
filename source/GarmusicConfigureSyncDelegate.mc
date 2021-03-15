@@ -31,6 +31,11 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
         }
     }
     
+    function onBack() {
+    	Media.startPlayback(null);
+    	return true;
+    }
+    
     function login(callback) {
     	if (storage.getValue(keys.OAUTH_TOKEN) != null) {
     		Media.startPlayback(null);

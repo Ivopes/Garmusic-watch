@@ -135,4 +135,8 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
 		// Push the Menu2 View set up in the initializer
 		WatchUi.pushView(menu, delegate, WatchUi.SLIDE_IMMEDIATE);
     }
+    function onBack() {
+    	Media.startPlayback(null);
+    	return true;
+    }
 }
