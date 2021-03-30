@@ -19,7 +19,7 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 
     function initialize() {
         SyncDelegate.initialize();  
-
+        
     }
 
     // Called when the system starts a sync of the app.
@@ -109,6 +109,7 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     function getListsCallback(responseType, data) {
     	if(responseType != 200) {
     		System.println("Cant get list");
+    		System.println(responseType);
     		Media.notifySyncComplete("Cant get list");
     		return;
     	}
@@ -124,14 +125,9 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     	mSongsDownList = getNotDownloadedSongs(songsToDown);
     	
     	mSongToSync = mSongsDownList.size();
-    	
-    	System.println(data);
-    	System.println(data["songs"]);
-    	System.println(data["playlists"]);
-    	System.println("ukladam");
+    			
     	storage.setValue(keys.PLAYLISTS_JSON, data["playlists"]);
     	storage.setValue(keys.SONGS_JSON, data["songs"]);
-    	System.println("ulozeno");
     	
     	if (mSongDelList.size() > 0) {
     		//System.println("del s");
@@ -250,9 +246,12 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     }
     // When sync is cancelled
     function onStopSync() {
-    	storage.deleteValue(keys.SONGS_JSON);
-    	storage.deleteValue(keys.PLAYLISTS_JSON);
-    	storage.deleteValue(keys.SONG_RES_ID);
+    	//storage.deleteValue(keys.SONGS_JSON);
+    	//storage.deleteValue(keys.PLAYLISTS_JSON);
+    	//storage.deleteValue(keys.SONG_RES_ID);
+    	System.println(""); 
+    	System.println("STOP SYNC !!!!!!!!!!!"); 		
+    	System.println(""); 
     	
     	Communications.cancelAllRequests();
         Media.notifySyncComplete("Sync has been calcelled");

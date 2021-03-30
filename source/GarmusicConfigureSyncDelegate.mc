@@ -9,6 +9,7 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
 
     function initialize() {
         BehaviorDelegate.initialize();
+       
     }
 
     function onSelect(item) { 
@@ -37,9 +38,12 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
     }
     
     function login(callback) {
+    //storage.setValue(keys.OAUTH_TOKEN, "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIyIiwiZXhwIjoxNjE3MTI5MjcyLCJpc3MiOiJodHRwOi8vZ2FybXVzaWMuYXp1cmV3ZWJzaXRlcy5uZXQvIn0.fhyLhGVb4DCDs5LvuhOT4b1hpLa3_XhS_L6aIJm6SK0");
+    	
     	if (storage.getValue(keys.OAUTH_TOKEN) != null) {
     		Media.startPlayback(null);
     	}
+    
     
     
 	   	//var requestUrl = "https://ivopes.github.io/";
