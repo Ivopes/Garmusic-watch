@@ -16,15 +16,6 @@ class PlaybackConfigurePlayerDelegate extends WatchUi.Menu2InputDelegate {
 
     function onSelect(item) {
         switch (item.getId().toString()) {
-        	case "shuffle": {
-        		//var sett = getSettings();
-        		
-        		sett[Media.PLAYBACK_CONTROL_SHUFFLE] = item.isChecked();
-        		
-        		//storage.setValue(keys.SETTINGS, sett);
-
-        		break;
-        	}
         	case "prev": {
         		//var sett = getSettings();
         		
@@ -56,24 +47,6 @@ class PlaybackConfigurePlayerDelegate extends WatchUi.Menu2InputDelegate {
         		//var sett = getSettings();
         		
         		sett[Media.PLAYBACK_CONTROL_SKIP_BACKWARD] = item.isChecked();
-        		
-        		//storage.setValue(keys.SETTINGS, sett);
-        		
-        		break;
-        	}
-        	case "rep": {
-        		//var sett = getSettings();
-        		
-        		sett[Media.PLAYBACK_CONTROL_REPEAT] = item.isChecked();
-        		
-        		//storage.setValue(keys.SETTINGS, sett);
-        		
-        		break;
-        	}
-        	case "rat": {
-        		//var sett = getSettings();
-        		
-        		sett[Media.PLAYBACK_CONTROL_RATING] = item.isChecked();
         		
         		//storage.setValue(keys.SETTINGS, sett);
         		

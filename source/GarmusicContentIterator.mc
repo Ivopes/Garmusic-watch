@@ -188,11 +188,11 @@ class GarmusicContentIterator extends Media.ContentIterator {
     	var settings = {};
 		settings[Media.PLAYBACK_CONTROL_NEXT] = true;
    		settings[Media.PLAYBACK_CONTROL_PREVIOUS] = true;
-   		settings[Media.PLAYBACK_CONTROL_SHUFFLE] = false;
+   		//settings[Media.PLAYBACK_CONTROL_SHUFFLE] = false;
    		settings[Media.PLAYBACK_CONTROL_SKIP_FORWARD] = false;
    		settings[Media.PLAYBACK_CONTROL_SKIP_BACKWARD] = false;
-   		settings[Media.PLAYBACK_CONTROL_REPEAT] = false;
-   		settings[Media.PLAYBACK_CONTROL_RATING] = false;
+   		//settings[Media.PLAYBACK_CONTROL_REPEAT] = false;
+   		//settings[Media.PLAYBACK_CONTROL_RATING] = false;
    		
    		storage.setValue(keys.SETTINGS, settings);
    		
