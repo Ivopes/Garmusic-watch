@@ -39,7 +39,7 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
     
     function login(callback) {
     // Uncomment next line if tested on simulator to simulate login
-    storage.setValue(keys.OAUTH_TOKEN, "<YOUR JWT>");
+    // storage.setValue(keys.OAUTH_TOKEN, "<YOUR JWT>");
     	
     	if (storage.getValue(keys.OAUTH_TOKEN) != null) {
     		Media.startPlayback(null);
