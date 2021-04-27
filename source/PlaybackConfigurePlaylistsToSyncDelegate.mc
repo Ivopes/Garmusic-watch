@@ -80,9 +80,6 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
     function sendSyncDataCallback(responseType, data) {
     	if (responseType == 200) {
     		storage.setValue(keys.PLAYLISTS_JSON, playlists);
-    	}
-    	else {
-    		System.println(responseType);
     	} 
     }
     

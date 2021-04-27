@@ -30,7 +30,6 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     		Media.notifySyncComplete("Please log in first");
     		return;
     	}
-    	System.println("start sync");
 		getLists(method(:getListsCallback));   
     }
     // Called by the system to determine if the app needs to be synced.
@@ -68,12 +67,10 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     // Downloads the next song to be synced
     function syncNextSong() {
     	if (mSongsDownList.size() == 0) {
-    		System.println("Konec sync");
     		Media.notifySyncComplete(null);
     		return;
     	}
     	var id = mSongsDownList[0];
-    	System.println("syncuju: " + id);
     	
         getSong(method(:saveSongDataCallback), id);
     }
@@ -103,15 +100,10 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     
     function getListsCallback(responseType, data) {
     	if(responseType != 200) {
-    		System.println("Cant get list");
-    		System.println(responseType);
     		Media.notifySyncComplete("Cant get list");
     		return;
     	}
     	
-    	System.println(data);
-    	System.println(data["songs"]);
-    	System.println(data["playlists"]);
     	mSongToSync = 0;
     	mSongDelList = getSongsToDel(data["songs"]);
     	
@@ -207,7 +199,6 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 	// Handles song download callback
 	function saveSongDataCallback(responseType, data, context) {
 		if (responseType != 200) {
-			System.println("Cant down song");
     		Media.notifySyncComplete("Cant down song");
     		return;
 		}

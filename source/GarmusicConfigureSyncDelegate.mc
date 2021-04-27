@@ -16,16 +16,13 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
         switch (item.getId()) {
         	case ids.LOGIN: {
         		login(method(:loginCallback));
-        		System.println("login");
         		break;
         	}
         	case ids.START_SYNC: {
-        		System.println("Sync menu press");
         		Media.startSync();
         		break;
         	}
         	case ids.LOGOUT: {
-        		System.println("logout");
         		logout();
         		break;
         	}
@@ -81,7 +78,6 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
     }
     
     function logout() {
-    	System.println("logout and delete");
     	
     	storage.clearValues();
     	
