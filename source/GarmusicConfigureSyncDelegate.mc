@@ -42,12 +42,8 @@ class GarmusicConfigureSyncDelegate extends WatchUi.BehaviorDelegate {
     		Media.startPlayback(null);
     	}
     
-    
-    
-	   	//var requestUrl = "https://ivopes.github.io/";
 	   	var requestUrl = APIConstants.getUrl() + "/login/watch";
 	
-		//var resultUrl = "https://ivopes.github.io/redir.html";
 		var resultUrl = APIConstants.getUrl() + "/login/watch/code";
 	 	
 	 	var resultType = Communications.OAUTH_RESULT_TYPE_URL;

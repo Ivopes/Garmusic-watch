@@ -144,7 +144,6 @@ class GarmusicContentIterator extends Media.ContentIterator {
         var playlistToPlay = null;
         
         if (playlistToPlayId != null) {
-        	//playlistToPlay = storage.getValue(keys.PLAYLISTS_JSON)[playlistToPlayId];
         	var playlists = storage.getValue(keys.PLAYLISTS_JSON);
         	for (var i = 0; i < playlists.size(); i++) {
         		if (playlists[i]["id"] == playlistToPlayId) {
