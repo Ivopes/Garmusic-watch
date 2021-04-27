@@ -15,4 +15,9 @@ git clone https://github.com/Ivopes/Garmusic-watch.git
 ```
 2. Open project in the Eclipse IDE
 3. Replace URLs in source/constants/APIConstats.mc with your web app URLs
-4. Run the app throught the simulator
+4. Set JWT obtained from browser after login and paste in into GarmusicConfigureSyncDelegate.mc
+```
+// Uncomment next line if tested on simulator to simulate login
+// storage.setValue(keys.OAUTH_TOKEN, "<YOUR JWT>");
+```
+5. Run the app throught the simulator
