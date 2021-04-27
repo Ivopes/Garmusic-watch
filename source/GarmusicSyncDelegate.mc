@@ -49,7 +49,6 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 	    
 		var headers = {
 			"Authorization" => "Bearer " + token
-			//"Content-Type" => "asd"
 			};
 		
 	    var options = {
@@ -65,7 +64,6 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 	   
 		var delegate = new RequestHandler(callback, context);
         delegate.makeWebRequest(url, params, options);
-		//Communications.makeWebRequest(url, {}, options, callback);
     }    
     // Downloads the next song to be synced
     function syncNextSong() {
@@ -83,14 +81,13 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 	function getLists(callback) {
     
     	var url = APIConstants.getApiUrl() + "/watch";  	
-		//System.println(url);
+
 	    var params = {};
 	    
 	    var token = storage.getValue(keys.OAUTH_TOKEN);
 	    
 		var headers = {
 			"Authorization" => "Bearer " + token
-			//"Content-Type" => "asd"
 			};
 		
 	    var options = {
@@ -101,8 +98,6 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 	   
 	   	var context = null;
 	   	
-	   	//var delegate = new RequestHandler(callback, context);
-        //delegate.makeWebRequest(url, params, options);
         Communications.makeWebRequest(url, params, options, callback);
     }
     
@@ -130,7 +125,6 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     	storage.setValue(keys.SONGS_JSON, data["songs"]);
     	
     	if (mSongDelList.size() > 0) {
-    		//System.println("del s");
     		deleteSongs();
     	}
     	
@@ -145,7 +139,6 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
     	}
     	
     	if (mSongsDownList.size() > 0) {
-    		//System.println("down s");
     		syncNextSong();
     	} 	
     }
@@ -198,12 +191,10 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
 	function deleteSongs() {
 		var songResId = storage.getValue(keys.SONG_RES_ID);
 
-		//System.println(songResId);
 		if (songResId == null || songResId.size() == 0) {
 			return;
 		} 
 		for(var i = 0; i < mSongDelList.size(); i++) {		
-			//System.println(mSongDelList[i]["id"]);
 			
 			// Deletes media by resID
 			var songId = mSongDelList[i]["id"];
@@ -245,14 +236,7 @@ class GarmusicSyncDelegate extends Media.SyncDelegate {
         Media.notifySyncProgress(progress);
     }
     // When sync is cancelled
-    function onStopSync() {
-    	//storage.deleteValue(keys.SONGS_JSON);
-    	//storage.deleteValue(keys.PLAYLISTS_JSON);
-    	//storage.deleteValue(keys.SONG_RES_ID);
-    	System.println(""); 
-    	System.println("STOP SYNC !!!!!!!!!!!"); 		
-    	System.println(""); 
-    	
+    function onStopSync() {   	
     	Communications.cancelAllRequests();
         Media.notifySyncComplete("Sync has been calcelled");
     }

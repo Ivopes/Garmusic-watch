@@ -90,13 +90,10 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
 			settings = getDefaultSettings();
 		}
 		
-		//menu.addItem(new CheckboxMenuItem("Shuffle", null, "shuffle", settings[Media.PLAYBACK_CONTROL_SHUFFLE], {}));
 		menu.addItem(new CheckboxMenuItem("Previous", null, "prev", settings[Media.PLAYBACK_CONTROL_PREVIOUS], {}));
 		menu.addItem(new CheckboxMenuItem("Next", null, "next", settings[Media.PLAYBACK_CONTROL_NEXT], {}));
 		menu.addItem(new CheckboxMenuItem("Skip forward", null, "skipF", settings[Media.PLAYBACK_CONTROL_SKIP_FORWARD], {}));
 		menu.addItem(new CheckboxMenuItem("Skip Backward", null, "skipB", settings[Media.PLAYBACK_CONTROL_SKIP_BACKWARD], {}));
-		//menu.addItem(new CheckboxMenuItem("Repeat", null, "rep", settings[Media.PLAYBACK_CONTROL_REPEAT], {}));
-		//menu.addItem(new CheckboxMenuItem("Rating", null, "rat", settings[Media.PLAYBACK_CONTROL_RATING], {}));
 		
 		WatchUi.pushView(menu, delegate, WatchUi.SLIDE_IMMEDIATE);
     }
@@ -105,11 +102,8 @@ class GarmusicConfigurePlaybackMenuDelegate extends WatchUi.Menu2InputDelegate {
     	var settings = {};
 		settings[Media.PLAYBACK_CONTROL_NEXT] = true;
    		settings[Media.PLAYBACK_CONTROL_PREVIOUS] = true;
-   		//settings[Media.PLAYBACK_CONTROL_SHUFFLE] = false;
    		settings[Media.PLAYBACK_CONTROL_SKIP_FORWARD] = false;
    		settings[Media.PLAYBACK_CONTROL_SKIP_BACKWARD] = false;
-   		//settings[Media.PLAYBACK_CONTROL_REPEAT] = false;
-   		//settings[Media.PLAYBACK_CONTROL_RATING] = false;
    		
    		storage.setValue(keys.SETTINGS, settings);
    		

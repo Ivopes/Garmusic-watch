@@ -68,7 +68,6 @@ class GarmusicContentIterator extends Media.ContentIterator {
     function next() {
     	if (mSongIndex + 1 >= mPlaylist.size()) {
     		mSongIndex = -1;
-    		//return null;
     	}
     	mSongIndex++;
     	
@@ -89,7 +88,6 @@ class GarmusicContentIterator extends Media.ContentIterator {
     	var temp = mSongIndex;
      	if (temp + 1 >= mPlaylist.size()) {
      		temp = -1;
-    		//return null;
     	}
     	// Get Id of song
     	var songResId = mPlaylist[temp+1];
@@ -108,7 +106,6 @@ class GarmusicContentIterator extends Media.ContentIterator {
     	var temp = mSongIndex;
     	if (mSongIndex  <= 0) {
     		temp = 1;
-    		//return null;
     	}
     	// Get Id of song
 
@@ -123,7 +120,6 @@ class GarmusicContentIterator extends Media.ContentIterator {
     function previous() {
     	if (mSongIndex  <= 0) {
     		mSongIndex = 1;
-    		//return null;
     	}
     	mSongIndex--;
     	// Get Id of song
@@ -137,7 +133,6 @@ class GarmusicContentIterator extends Media.ContentIterator {
     // Determine if playback is currently set to shuffle.
     function shuffling() {
      	return mShuffling;
-        //return false;
     }
     
     // Gets the songs to play. If no playlist is available then all the songs in the
@@ -188,11 +183,8 @@ class GarmusicContentIterator extends Media.ContentIterator {
     	var settings = {};
 		settings[Media.PLAYBACK_CONTROL_NEXT] = true;
    		settings[Media.PLAYBACK_CONTROL_PREVIOUS] = true;
-   		//settings[Media.PLAYBACK_CONTROL_SHUFFLE] = false;
    		settings[Media.PLAYBACK_CONTROL_SKIP_FORWARD] = false;
    		settings[Media.PLAYBACK_CONTROL_SKIP_BACKWARD] = false;
-   		//settings[Media.PLAYBACK_CONTROL_REPEAT] = false;
-   		//settings[Media.PLAYBACK_CONTROL_RATING] = false;
    		
    		storage.setValue(keys.SETTINGS, settings);
    		

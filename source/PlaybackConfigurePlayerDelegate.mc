@@ -16,40 +16,20 @@ class PlaybackConfigurePlayerDelegate extends WatchUi.Menu2InputDelegate {
 
     function onSelect(item) {
         switch (item.getId().toString()) {
-        	case "prev": {
-        		//var sett = getSettings();
-        		
-        		sett[Media.PLAYBACK_CONTROL_PREVIOUS] = item.isChecked();
-        		
-        		//storage.setValue(keys.SETTINGS, sett);
-        		
+        	case "prev": {        		
+        		sett[Media.PLAYBACK_CONTROL_PREVIOUS] = item.isChecked();	
         		break;
         	}
-        	case "next": {
-        		//var sett = getSettings();
-        		
-        		sett[Media.PLAYBACK_CONTROL_NEXT] = item.isChecked();
-        		
-        		//storage.setValue(keys.SETTINGS, sett);
-        		
+        	case "next": { 		
+        		sett[Media.PLAYBACK_CONTROL_NEXT] = item.isChecked();	
         		break;
         	}
         	case "skipF": {
-        		//var sett = getSettings();
-        		
-        		sett[Media.PLAYBACK_CONTROL_SKIP_FORWARD] = item.isChecked();
-        		
-        		//storage.setValue(keys.SETTINGS, sett);
-        		
+        		sett[Media.PLAYBACK_CONTROL_SKIP_FORWARD] = item.isChecked();   		
         		break;
         	}
         	case "skipB": {
-        		//var sett = getSettings();
-        		
-        		sett[Media.PLAYBACK_CONTROL_SKIP_BACKWARD] = item.isChecked();
-        		
-        		//storage.setValue(keys.SETTINGS, sett);
-        		
+        		sett[Media.PLAYBACK_CONTROL_SKIP_BACKWARD] = item.isChecked();		
         		break;
         	}
         }

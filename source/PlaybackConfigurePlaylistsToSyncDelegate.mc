@@ -28,8 +28,6 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
 
     function onSelect(item) {
         var name = item.getId();
-        
-        //var playlists = storage.getValue(keys.PLAYLISTS_JSON);
 
 		for (var i = 0; i < playlists.size(); i++) {
 			if (playlists[i]["name"].equals(name)) {
@@ -41,8 +39,7 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
 				break;
 			}
 		}
-		
-		//storage.setValue(keys.PLAYLISTS_JSON, playlists);
+
     }
     
     function onDone() {
@@ -53,8 +50,7 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
     }
     
     function sendSyncData(callback) {
-    	//var playlists = storage.getValue(keys.PLAYLISTS_JSON);
-    	
+      	
     	if (playlists == null || playlists.size() == 0) {
     		return;
     	}
@@ -78,8 +74,6 @@ class PlaybackConfigurePlaylistsToSyncDelegate extends WatchUi.Menu2InputDelegat
 	    	:method => Communications.HTTP_REQUEST_METHOD_PUT
 	    };
 
-		//var delegate = new RequestHandler(callback, context);
-        //delegate.makeWebRequest(url, params, options);
         Communications.makeWebRequest(url, params, options, callback);
     }
     
